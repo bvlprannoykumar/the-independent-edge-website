@@ -69,7 +69,7 @@ img{max-width:100%;display:block;}
 .eyebrow{font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink3);margin-bottom:16px;display:block;}
 .eyebrow-lime{color:var(--lime);background:var(--navy);padding:3px 10px;border-radius:3px;display:inline-block;}
 .h-xl{font-size:clamp(42px,6vw,72px);font-weight:800;line-height:1.06;letter-spacing:-1.5px;color:var(--navy);}
-.h-xl em{font-style:normal;color:var(--navy);background:var(--lime);padding:0 6px;}
+/* .h-xl em override removed */
 .h-lg{font-size:clamp(34px,5vw,52px);font-weight:800;line-height:1.1;letter-spacing:-1px;}
 .h-md{font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.15;letter-spacing:-.5px;}
 .h-sm{font-size:20px;font-weight:700;line-height:1.3;letter-spacing:-.2px;}
@@ -97,12 +97,13 @@ img{max-width:100%;display:block;}
 
 /* ── HERO: HOME ── */
 .hero-home{background:var(--bg);padding-top:140px;padding-bottom:80px;}
-.hero-home-inner{max-width:var(--max);margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 380px;gap:80px;align-items:start;}
-.hero-home-text{}
-.hero-home-headline{margin-bottom:28px;}
-.hero-home-sub{font-size:19px;line-height:1.65;color:var(--ink2);max-width:520px;margin-bottom:36px;}
+.hero-home-inner{max-width:1180px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:minmax(0,0.95fr) 380px;gap:72px;align-items:start;}
+.hero-home-text{max-width:680px;}
+.hero-home-headline{font-size:clamp(58px,6vw,88px);line-height:0.98;letter-spacing:-3px;max-width:760px;margin-bottom:26px;}
+.hero-home-sub{max-width:560px;font-size:19px;line-height:1.65;color:var(--ink2);margin-bottom:36px;}
 .hero-home-ctas{display:flex;gap:12px;flex-wrap:wrap;}
-.hero-home-right{}
+.hero-home-right{padding-top:8px;}
+.hero-home-right>div:first-child{box-shadow:0 18px 50px rgba(10,25,47,.10);}
 .hero-stat-cards{display:flex;flex-direction:column;gap:14px;margin-top:8px;}
 .stat-card{background:var(--navy);border-radius:var(--r);padding:22px 24px;}
 .stat-card-num{font-family:'Manrope',sans-serif;font-size:32px;font-weight:800;color:var(--lime);margin-bottom:4px;line-height:1;}
@@ -155,12 +156,14 @@ img{max-width:100%;display:block;}
 .gap-inner{max-width:var(--max);margin:0 auto;padding:0 32px;}
 .gap-header{max-width:560px;margin-bottom:56px;}
 .gap-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.gap-card{border-radius:var(--r);padding:28px;border:1px solid var(--bg3);}
-.gap-card-num{font-family:'Manrope',sans-serif;font-size:40px;font-weight:800;color:var(--bg3);line-height:1;margin-bottom:16px;}
+.gap-card{border-radius:var(--r);overflow:hidden;min-height:210px;padding:72px 28px 28px 28px;border:1px solid var(--bg3);position:relative;}
+.gap-card-num{position:absolute;top:18px;left:24px;z-index:0;font-family:'Manrope',sans-serif;font-size:56px;font-weight:800;line-height:1;color:rgba(10,25,47,.10);pointer-events:none;}
 .gap-card-title{font-size:16px;font-weight:700;margin-bottom:10px;color:var(--navy);}
 .gap-card-body{font-size:14px;color:var(--ink3);line-height:1.6;}
 .gap-card.highlight{background:var(--navy);border-color:var(--navy);}
-.gap-card.highlight .gap-card-num{color:rgba(255,255,255,.1);}
+.gap-card.highlight .gap-card-num{color:rgba(255,255,255,0.13);}
+.gap-card-title,.gap-card-body{position:relative;z-index:1;}
+.hero-hl{font-style:normal;color:var(--navy);background:linear-gradient(to bottom,transparent 42%,var(--lime) 42%,var(--lime) 88%,transparent 88%);padding:0 2px;border-radius:0;display:inline;-webkit-box-decoration-break:clone;box-decoration-break:clone;}
 .gap-card.highlight .gap-card-title{color:#fff;}
 .gap-card.highlight .gap-card-body{color:rgba(255,255,255,.6);}
 
@@ -235,7 +238,8 @@ img{max-width:100%;display:block;}
 /* ── FINAL CTA ── */
 .final-cta{background:var(--navy);padding:96px 0;}
 .final-cta-inner{max-width:var(--max-s);margin:0 auto;padding:0 32px;text-align:center;}
-.final-cta-title{font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.1;letter-spacing:-1px;color:#fff;margin-bottom:20px;}
+.final-cta-title{font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.05;letter-spacing:-1px;color:#fff;margin-bottom:20px;max-width:760px;margin-left:auto;margin-right:auto;text-align:center;}
+.final-cta-title em{display:inline;}
 .final-cta-title em{font-style:normal;color:var(--lime);}
 .final-cta-sub{font-size:16px;color:rgba(255,255,255,.55);margin-bottom:40px;line-height:1.65;}
 .final-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
@@ -343,10 +347,10 @@ img{max-width:100%;display:block;}
 /* ── THE WEEKLY EDGE ── */
 .edge-hero{background:var(--bg);padding-top:140px;padding-bottom:64px;}
 .edge-hero-inner{max-width:var(--max);margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 380px;gap:80px;align-items:start;}
-.edge-hero-visual{border-radius:var(--r);overflow:hidden;background:var(--navy);padding:36px;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:flex-end;}
-.edge-issue-preview{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--rs);padding:20px;margin-bottom:16px;}
+.edge-hero-visual{border-radius:var(--r);overflow:hidden;background:var(--navy);padding:32px;min-height:280px;aspect-ratio:auto;display:flex;flex-direction:column;justify-content:space-between;}
+.edge-issue-preview{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--rs);padding:20px;margin-bottom:16px;flex-shrink:0;}
 .edge-issue-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--lime);font-family:'Manrope',sans-serif;margin-bottom:8px;}
-.edge-issue-title{font-size:16px;font-weight:700;color:#fff;line-height:1.3;}
+.edge-issue-title{font-size:16px;font-weight:700;color:#fff;line-height:1.35;max-width:100%;}
 .edge-issue-meta{font-size:12px;color:rgba(255,255,255,.4);margin-top:6px;}
 .edge-sub-count{font-size:13px;color:rgba(255,255,255,.5);}
 .covers-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px;}
@@ -399,15 +403,15 @@ img{max-width:100%;display:block;}
 
 /* ── FOOTER ── */
 .footer{background:var(--navy);color:rgba(255,255,255,.5);}
-.footer-inner{max-width:var(--max);margin:0 auto;padding:56px 32px 32px;}
-.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
-.footer-brand{font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;color:#fff;margin-bottom:12px;}
-.footer-brand span{color:var(--lime);}
-.footer-tagline{font-size:13px;color:rgba(255,255,255,.4);line-height:1.6;}
+.footer-inner{max-width:1180px;margin:0 auto;padding:64px 40px 32px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 0.8fr 0.8fr;gap:72px;align-items:start;margin-bottom:56px;}
+.footer-brand{font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;color:#fff;margin-bottom:14px;white-space:nowrap;}
+.footer-brand span{color:var(--lime);margin-left:4px;}
+.footer-tagline{max-width:320px;font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;}
 .footer-col-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);margin-bottom:14px;font-family:'Manrope',sans-serif;}
-.footer-link{display:block;font-size:13px;color:rgba(255,255,255,.5);margin-bottom:8px;cursor:pointer;transition:color .15s;}
+.footer-link{display:block;font-size:13px;color:rgba(255,255,255,.5);margin-bottom:10px;cursor:pointer;transition:color .15s;}
 .footer-link:hover{color:#fff;}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:26px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 .footer-copy{font-size:12px;}
 .footer-legal{display:flex;gap:20px;}
 .footer-legal a{font-size:12px;color:rgba(255,255,255,.3);cursor:pointer;}
@@ -418,8 +422,13 @@ img{max-width:100%;display:block;}
 .mobile-nav-link{padding:16px 0;font-size:18px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--bg3);cursor:pointer;font-family:'Manrope',sans-serif;}
 
 @media(max-width:900px){
-  .hero-home-inner{grid-template-columns:1fr;gap:48px;}
+  .hero-home{padding-top:112px;}
+  .hero-home-inner{grid-template-columns:1fr;gap:40px;padding:0 24px;}
+  .hero-home-text{max-width:100%;}
+  .hero-home-headline{font-size:clamp(42px,12vw,58px);line-height:1.02;letter-spacing:-1.6px;}
   .hero-home-right{display:none;}
+  .footer-inner{padding:48px 24px 28px;}
+  .footer-top{grid-template-columns:1fr;gap:32px;}
   .reality-inner,.purpose-inner,.changes-inner{grid-template-columns:1fr;gap:40px;}
   .who-grid,.shift-grid,.gap-cards,.system-steps,.ai-tools,.path-steps,.why-tension,.insight-grid{grid-template-columns:1fr;}
   .system-steps{gap:0;}
@@ -504,6 +513,11 @@ img{max-width:100%;display:block;}
   .q-card { padding:24px 20px; }
   .q-text { font-size:17px; }
 }
+.substack-card{max-width:520px;background:#ffffff;border:1px solid var(--bg3);border-radius:14px;padding:28px;box-shadow:0 8px 32px rgba(10,25,47,.06);}
+.edge-cta-section .substack-card{margin:0 auto;}
+.substack-card-label{font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink3);margin-bottom:10px;}
+.substack-card-title{font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:10px;}
+.substack-card-copy{font-size:14px;line-height:1.6;color:var(--ink2);margin-bottom:20px;}
 </style>
 </head>
 <body>
@@ -543,8 +557,9 @@ img{max-width:100%;display:block;}
     <div class="hero-home-inner">
       <div class="hero-home-text fade">
         <span class="eyebrow">For Indian professionals who want more control</span>
-        <h1 class="h-xl hero-home-headline">Most professionals don't fail because they lack knowledge.<br/>They fail when the <em>conversation becomes real.</em></h1>
-        <p class="hero-home-sub">When stakes rise, thinking collapses. You hesitate, over explain, or avoid saying what needs to be said. That is where outcomes are decided.</p>
+        <h1 class="h-xl hero-home-headline">Knowledge is common.<br/>Composure is <em class="hero-hl">rare.</em></h1>
+        <p class="hero-home-sub">Most careers do not break from lack of skill.
+        They break when pressure changes the conversation.</p>
         <div class="hero-home-ctas">
           <button class="btn btn-primary btn-lg" onclick="showPage('apply')">Request Access</button>
           <button class="btn btn-outline btn-lg" onclick="showPage('wwm')">How It Works</button>
@@ -568,7 +583,7 @@ img{max-width:100%;display:block;}
             </div>
             <div style="display:flex;align-items:center;gap:12px;">
               <div style="width:8px;height:8px;background:var(--lime);border-radius:50%;flex-shrink:0;"></div>
-              <div style="font-size:15px;font-weight:600;color:#fff;">AI-assisted feedback</div>
+              <div style="font-size:15px;font-weight:600;color:#fff;">AI assisted feedback</div>
             </div>
           </div>
           <div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);">
@@ -820,8 +835,8 @@ img{max-width:100%;display:block;}
   <section class="trust-section">
     <div class="trust-inner">
       <div class="trust-header fade">
-        <h2 class="h-md" style="margin-bottom:12px;">This is not what most people expect from a sales program.</h2>
-        <p class="body-md">The Independent Edge is built on a specific approach to skill development that is different from most programs in this space.</p>
+        <h2 class="h-md" style="margin-bottom:12px;">This is not what most people expect from sales work.</h2>
+        <p class="body-md">The Independent Edge is built on a specific approach to skill development that is different from most approaches in this space.</p>
       </div>
       <div class="trust-points">
         <div class="trust-point fade fade-delay-1">
@@ -842,7 +857,7 @@ img{max-width:100%;display:block;}
           <div class="trust-icon">
             <svg fill="none" viewBox="0 0 24 24"><path stroke="#CCFF00" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
-          <h3 class="trust-title">AI-assisted review</h3>
+          <h3 class="trust-title">AI assisted review</h3>
           <p class="trust-desc">Practice sessions can be reviewed and diagnosed with AI feedback, so you learn from real conversations faster instead of repeating the same patterns.</p>
         </div>
       </div>
@@ -870,8 +885,8 @@ img{max-width:100%;display:block;}
           <div class="path-step-num">02</div>
           <div class="path-step-content">
             <div class="path-step-label">Application required</div>
-            <h3 class="path-step-title">Apply for the Coaching Program</h3>
-            <p class="path-step-desc">A high filter environment for professionals serious about changing how they operate in conversations. Limited intake. Application-based.</p>
+            <h3 class="path-step-title">Apply for Coaching</h3>
+            <p class="path-step-desc">A high filter environment for professionals serious about changing how they operate in conversations. Limited spaces. Application only.</p>
             <div class="path-arrow">View the program →</div>
           </div>
         </div>
@@ -882,7 +897,7 @@ img{max-width:100%;display:block;}
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="final-cta-inner fade">
-      <h2 class="final-cta-title">If the conversation is where<br/>you lose, <em>this is where you fix it.</em></h2>
+      <h2 class="final-cta-title">If the conversation is where you lose,<br/><em>this is where you fix it.</em></h2>
       <p class="final-cta-sub">A small group. A controlled environment. Real correction.</p>
       <div class="final-cta-btns">
         <button class="btn btn-primary btn-lg" onclick="showPage('edge')">Read The Weekly Edge</button>
@@ -1042,7 +1057,7 @@ img{max-width:100%;display:block;}
       <div class="wwm-offer">
         <div class="fade">
           <span class="eyebrow">Coaching program</span>
-          <h1 class="h-xl" style="margin-bottom:20px;">This is not a course.<br/>It is a <em>correction process.</em></h1>
+          <h1 class="h-xl" style="margin-bottom:20px;">This is not a course.<br/>It is a <em class="hero-hl">correction</em> process.</h1>
           <p class="body-lg" style="max-width:520px;margin-bottom:28px;">You will be put in situations where you do not have a script, the other person is uncertain, and the outcome depends on how you think in real time. Most people break here. That is exactly where we work.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap;">
             <button class="btn btn-primary btn-lg" onclick="showPage('apply')">Start Application</button>
@@ -1216,11 +1231,12 @@ img{max-width:100%;display:block;}
         <span class="eyebrow-lime" style="margin-bottom:20px;display:inline-block;font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;">The Newsletter</span>
         <h1 class="h-xl" style="margin-bottom:20px;">What you will start noticing.</h1>
         <p class="body-lg" style="max-width:500px;margin-bottom:32px;">Conversations don't fail randomly. There is always a moment where control is lost, where hesitation shows up, where the other person pulls back. Most people miss it. You won't. That's the difference.</p>
-        <div class="email-form">
-          <input type="email" id="emailHome" placeholder="your@email.com"/>
-          <button onclick="handleEmailSignup()">Join Free</button>
+<div class="substack-card">
+          <div class="substack-card-label">The Weekly Edge</div>
+          <div class="substack-card-title">One useful signal every Sunday.</div>
+          <div class="substack-card-copy">Read the newsletter on Substack and subscribe there. No spam. No motivational noise.</div>
+          <a class="btn btn-primary" href="https://theindependentedge.substack.com/" target="_blank" rel="noopener noreferrer">Open The Weekly Edge</a>
         </div>
-        <p style="font-size:12px;color:var(--ink3);margin-top:10px;">No spam. No noise. Unsubscribe anytime.</p>
       </div>
       <div class="edge-hero-visual fade fade-delay-2">
         <div class="edge-issue-preview">
@@ -1304,9 +1320,8 @@ img{max-width:100%;display:block;}
         </div>
         <div class="fade fade-delay-2">
           <div style="background:var(--navy);border-radius:var(--r);padding:32px;">
-            <div style="font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:20px;">From the editor</div>
-            <div style="font-family:'Manrope',sans-serif;font-size:19px;font-weight:700;line-height:1.5;color:#fff;font-style:italic;margin-bottom:20px;">"In an era of infinite content, the only true luxury is a curated perspective that respects your cognitive bandwidth."</div>
-            <div style="font-size:13px;color:rgba(255,255,255,.4);">— The Independent Edge, Issue #01</div>
+            <div style="font-family:'Manrope',sans-serif;font-size:20px;font-weight:700;line-height:1.55;color:#fff;">The problem isn't what you know.</div>
+            <div style="font-family:'Manrope',sans-serif;font-size:20px;font-weight:700;line-height:1.55;color:rgba(255,255,255,.6);margin-top:8px;">It's what you avoid when it gets real.</div>
           </div>
         </div>
       </div>
@@ -1319,11 +1334,12 @@ img{max-width:100%;display:block;}
       <span style="font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.35);display:block;margin-bottom:16px;">Ready for the edge?</span>
       <h2 style="font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.1;letter-spacing:-1px;color:#fff;margin-bottom:20px;">Join professionals who<br/>choose depth over noise.</h2>
       <p style="font-size:16px;color:rgba(255,255,255,.5);margin-bottom:40px;line-height:1.65;">No spam. No motivational content. Just one signal per week that makes you sharper.</p>
-      <div class="email-form email-form-dark" style="max-width:440px;margin:0 auto;">
-        <input type="email" id="emailEdge" placeholder="your@email.com"/>
-        <button onclick="handleEmailSignupEdge()">Subscribe Free</button>
-      </div>
-      <p style="font-size:12px;color:rgba(255,255,255,.25);margin-top:12px;">One issue per week. Takes 5 minutes. </p>
+      <div class="substack-card">
+      <div class="substack-card-label">The Weekly Edge</div>
+      <div class="substack-card-title">One useful signal every Sunday.</div>
+      <div class="substack-card-copy">Read the newsletter on Substack and subscribe there. No spam. No motivational noise.</div>
+      <a class="btn btn-primary" href="https://theindependentedge.substack.com/" target="_blank" rel="noopener noreferrer">Open The Weekly Edge</a>
+    </div>
     </div>
   </section>
 
@@ -1746,7 +1762,7 @@ img{max-width:100%;display:block;}
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-top" style="grid-template-columns:1fr 1fr 1fr;">
+    <div class="footer-top">
       <div>
         <div class="footer-brand">The Independent <span>Edge</span></div>
         <div class="footer-tagline">Built for Indian corporate professionals who want more control over income and more confidence in high stakes conversations.</div>
