@@ -1,0 +1,66 @@
+# netlify.toml
+# Clean URL configuration for The Independent Edge
+
+[build]
+  publish = "."
+
+# Pretty URLs: serve work-with-me.html at /work-with-me, etc.
+[[redirects]]
+  from = "/work-with-me"
+  to = "/work-with-me.html"
+  status = 200
+
+[[redirects]]
+  from = "/the-weekly-edge"
+  to = "/the-weekly-edge.html"
+  status = 200
+
+[[redirects]]
+  from = "/apply"
+  to = "/apply.html"
+  status = 200
+
+# Force HTTPS and strip trailing slashes (optional, Netlify handles HTTPS by default)
+[[redirects]]
+  from = "/work-with-me/"
+  to = "/work-with-me"
+  status = 301
+
+[[redirects]]
+  from = "/the-weekly-edge/"
+  to = "/the-weekly-edge"
+  status = 301
+
+[[redirects]]
+  from = "/apply/"
+  to = "/apply"
+  status = 301
+
+# Redirect .html URLs to clean URLs (avoid duplicate content)
+[[redirects]]
+  from = "/work-with-me.html"
+  to = "/work-with-me"
+  status = 301
+
+[[redirects]]
+  from = "/the-weekly-edge.html"
+  to = "/the-weekly-edge"
+  status = 301
+
+[[redirects]]
+  from = "/apply.html"
+  to = "/apply"
+  status = 301
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

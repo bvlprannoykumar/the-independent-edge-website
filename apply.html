@@ -1,0 +1,3675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>Apply | The Independent Edge</title>
+  <meta name="title" content="Apply | The Independent Edge" />
+  <meta name="description" content="Apply for The Independent Edge coaching program designed for professionals who want stronger communication, commercial thinking, and real world conversation skills." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="The Independent Edge" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://theindependentedge.in/apply" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theindependentedge.in/apply" />
+  <meta property="og:title" content="Apply | The Independent Edge" />
+  <meta property="og:description" content="Apply for The Independent Edge coaching program designed for professionals who want stronger communication, commercial thinking, and real world conversation skills." />
+  <meta property="og:image" content="https://theindependentedge.in/og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="The Independent Edge" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://theindependentedge.in/apply" />
+  <meta name="twitter:title" content="Apply | The Independent Edge" />
+  <meta name="twitter:description" content="Apply for The Independent Edge coaching program designed for professionals who want stronger communication, commercial thinking, and real world conversation skills." />
+  <meta name="twitter:image" content="https://theindependentedge.in/og-default.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --navy: #0A192F;
+      --navy80: #1a2e47;
+      --navy60: #2a4a6b;
+      --navy20: #d0dae8;
+      --primary: #0A192F;
+      --lime: #CCFF00;
+      --lime80: #b8e600;
+      --lime10: rgba(204, 255, 0, .10);
+      --tertiary: #CCFF00;
+      --slate: #4B5563;
+      --slate3: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg2: #F7F7F7;
+      --bg3: #F0F0F0;
+      --n3: #E2E2E2;
+      --n2: #EFEFEF;
+      --white: #FFFFFF;
+      --ink: #0A192F;
+      --ink2: #4B5563;
+      --ink3: #6B7280;
+      --r: 12px;
+      --rs: 8px;
+      --rx: 4px;
+      --max: 1100px;
+      --max-s: 720px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'Manrope', sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ::selection {
+      background: var(--lime);
+      color: var(--navy);
+    }
+
+    /* ── FADE IN ── */
+    .fade {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .fade.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .fade-delay-1 {
+      transition-delay: .1s;
+    }
+
+    .fade-delay-2 {
+      transition-delay: .2s;
+    }
+
+    .fade-delay-3 {
+      transition-delay: .3s;
+    }
+
+    .fade-delay-4 {
+      transition-delay: .4s;
+    }
+
+    /* ── PAGES ── */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: rgba(255, 255, 255, .95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(10, 25, 47, .06);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--navy);
+      letter-spacing: -.3px;
+      cursor: pointer;
+    }
+
+    .nav-brand span {
+      color: var(--lime);
+      background: var(--navy);
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-link {
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink2);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: color .15s, background .15s;
+    }
+
+    .nav-link:hover {
+      color: var(--navy);
+      background: var(--bg2);
+    }
+
+    .nav-link.active {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .nav-cta {
+      padding: 9px 20px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Manrope', sans-serif;
+      transition: background .15s;
+    }
+
+    .nav-cta:hover {
+      background: var(--navy80);
+    }
+
+    .nav-mobile {
+      display: none;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-ham {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* ── SECTIONS ── */
+    .pt {
+      padding-top: 120px;
+    }
+
+    .pb {
+      padding-bottom: 96px;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-sm {
+      padding: 64px 0;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .wrap-s {
+      max-width: var(--max-s);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .wrap-md {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ── TYPE SCALE ── */
+    .eyebrow {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--ink3);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .eyebrow-lime {
+      color: var(--lime);
+      background: var(--navy);
+      padding: 3px 10px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
+    .h-xl {
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 800;
+      line-height: 1.06;
+      letter-spacing: -1.5px;
+      color: var(--navy);
+    }
+
+    /* .h-xl em override removed */
+    .h-lg {
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .h-md {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -.5px;
+    }
+
+    .h-sm {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -.2px;
+    }
+
+    .h-xs {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .body-lg {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--ink2);
+    }
+
+    .body-md {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ink2);
+    }
+
+    .body-sm {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--ink3);
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: 8px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all .15s;
+      letter-spacing: .01em;
+    }
+
+    .btn-primary {
+      background: var(--lime);
+      color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: var(--lime80);
+    }
+
+    .btn-dark {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .btn-dark:hover {
+      background: var(--navy80);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+
+    .btn-outline:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, .4);
+    }
+
+    .btn-outline-white:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .btn-lg {
+      padding: 16px 32px;
+      font-size: 15px;
+    }
+
+    .btn-sm {
+      padding: 9px 18px;
+      font-size: 13px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: rgba(10, 25, 47, .07);
+      margin: 0;
+    }
+
+    .divider-heavy {
+      height: 1px;
+      background: rgba(10, 25, 47, .14);
+    }
+
+    /* ── HERO: HOME ── */
+    .hero-home {
+      background: var(--bg);
+      padding-top: 140px;
+      padding-bottom: 80px;
+    }
+
+    .hero-home-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) 380px;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .hero-home-text {
+      max-width: 680px;
+    }
+
+    .hero-home-headline {
+      font-size: clamp(58px, 6vw, 88px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      max-width: 760px;
+      margin-bottom: 26px;
+    }
+
+    .hero-home-sub {
+      max-width: 560px;
+      font-size: 19px;
+      line-height: 1.65;
+      color: var(--ink2);
+      margin-bottom: 36px;
+    }
+
+    .hero-home-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-home-right {
+      padding-top: 8px;
+    }
+
+    .hero-home-right>div:first-child {
+      box-shadow: 0 18px 50px rgba(10, 25, 47, .10);
+    }
+
+    .hero-stat-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .stat-card {
+      background: var(--navy);
+      border-radius: var(--r);
+      padding: 22px 24px;
+    }
+
+    .stat-card-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--lime);
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+
+    .stat-card-label {
+      font-size: 13px;
+      color: rgba(255, 255, 255, .6);
+      line-height: 1.4;
+    }
+
+    .stat-card-sm {
+      background: var(--bg2);
+      border: 1px solid var(--bg3);
+      border-radius: var(--rs);
+      padding: 16px 18px;
+    }
+
+    .stat-card-sm .sc-label {
+      font-size: 12px;
+      color: var(--ink3);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .stat-card-sm .sc-val {
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* ── WHO IS IT FOR ── */
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .who-card {
+      padding: 28px;
+      border: 1px solid var(--bg3);
+      border-radius: var(--r);
+      background: var(--bg);
+    }
+
+    .who-card-tick {
+      width: 28px;
+      height: 28px;
+      background: var(--lime10);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .who-card-tick svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .who-list {
+      margin-top: 0;
+    }
+
+    .who-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--ink2);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .who-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--lime);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    /* ── REALITY CHECK ── */
+    .reality-section {
+      background: var(--navy);
+    }
+
+    .reality-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .reality-left {}
+
+    .reality-eyebrow {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--lime);
+      margin-bottom: 20px;
+    }
+
+    .reality-headline {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -.5px;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    .reality-body {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, .6);
+    }
+
+    .reality-right {}
+
+    .reality-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .reality-card {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: var(--r);
+      padding: 20px 22px;
+    }
+
+    .reality-card-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(255, 255, 255, .3);
+      margin-bottom: 8px;
+    }
+
+    .reality-card-text {
+      font-size: 15px;
+      color: rgba(255, 255, 255, .85);
+      line-height: 1.55;
+    }
+
+    .reality-card.accent {
+      border-color: rgba(204, 255, 0, .3);
+      background: rgba(204, 255, 0, .05);
+    }
+
+    .reality-card.accent .reality-card-text {
+      color: var(--lime);
+    }
+
+    /* ── INSIGHT SHIFT ── */
+    .shift-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .shift-col {
+      padding: 36px 32px;
+      border: 1px solid var(--bg3);
+    }
+
+    .shift-col.before {
+      background: var(--bg2);
+    }
+
+    .shift-col.after {
+      background: var(--navy);
+    }
+
+    .shift-col-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 20px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .shift-col.before .shift-col-label {
+      color: var(--ink3);
+    }
+
+    .shift-col.after .shift-col-label {
+      color: var(--lime);
+    }
+
+    .shift-item {
+      margin-bottom: 18px;
+    }
+
+    .shift-item-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .shift-col.before .shift-item-title {
+      color: var(--ink2);
+    }
+
+    .shift-col.after .shift-item-title {
+      color: #fff;
+    }
+
+    .shift-col.before .shift-item-desc {
+      font-size: 13px;
+      color: var(--ink3);
+      line-height: 1.5;
+    }
+
+    .shift-col.after .shift-item-desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, .55);
+      line-height: 1.5;
+    }
+
+    /* ── THE GAP ── */
+    .gap-section {}
+
+    .gap-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .gap-header {
+      max-width: 560px;
+      margin-bottom: 56px;
+    }
+
+    .gap-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gap-card {
+      border-radius: var(--r);
+      overflow: hidden;
+      min-height: 210px;
+      padding: 72px 28px 28px 28px;
+      border: 1px solid var(--bg3);
+      position: relative;
+    }
+
+    .gap-card-num {
+      position: absolute;
+      top: 18px;
+      left: 24px;
+      z-index: 0;
+      font-family: 'Manrope', sans-serif;
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 1;
+      color: rgba(10, 25, 47, .10);
+      pointer-events: none;
+    }
+
+    .gap-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--navy);
+    }
+
+    .gap-card-body {
+      font-size: 14px;
+      color: var(--ink3);
+      line-height: 1.6;
+    }
+
+    .gap-card.highlight {
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .gap-card.highlight .gap-card-num {
+      color: rgba(255, 255, 255, 0.13);
+    }
+
+    .gap-card-title,
+    .gap-card-body {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-hl {
+      font-style: normal;
+      color: var(--navy);
+      background: linear-gradient(to bottom, transparent 42%, var(--lime) 42%, var(--lime) 88%, transparent 88%);
+      padding: 0 2px;
+      border-radius: 0;
+      display: inline;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    .gap-card.highlight .gap-card-title {
+      color: #fff;
+    }
+
+    .gap-card.highlight .gap-card-body {
+      color: rgba(255, 255, 255, .6);
+    }
+
+    /* ── THE SYSTEM ── */
+    .system-section {
+      background: var(--bg2);
+    }
+
+    .system-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 32px;
+    }
+
+    .system-header {
+      text-align: center;
+      max-width: 540px;
+      margin: 0 auto 60px;
+    }
+
+    .system-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--bg3);
+    }
+
+    .system-step {
+      background: var(--bg);
+      padding: 36px 32px;
+    }
+
+    .system-step-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--lime);
+      background: var(--navy);
+      padding: 3px 10px;
+      border-radius: 3px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .system-step-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+
+    .system-step-body {
+      font-size: 14px;
+      color: var(--ink3);
+      line-height: 1.6;
+    }
+
+    .system-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--bg3);
+    }
+
+    /* ── AI EDGE ── */
+    .ai-section {
+      background: var(--navy);
+      padding: 80px 0;
+    }
+
+    .ai-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .ai-header {
+      margin-bottom: 56px;
+    }
+
+    .ai-eyebrow {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--lime);
+      margin-bottom: 16px;
+    }
+
+    .ai-headline {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -.5px;
+      color: #fff;
+      max-width: 580px;
+      margin-bottom: 16px;
+    }
+
+    .ai-sub {
+      font-size: 16px;
+      color: rgba(255, 255, 255, .55);
+      max-width: 520px;
+      line-height: 1.65;
+    }
+
+    .ai-tools {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .ai-tool {
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: var(--r);
+      padding: 28px 26px;
+      transition: border-color .2s;
+    }
+
+    .ai-tool:hover {
+      border-color: rgba(204, 255, 0, .3);
+    }
+
+    .ai-tool-tag {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--lime);
+      background: rgba(204, 255, 0, .1);
+      padding: 3px 10px;
+      border-radius: 3px;
+      display: inline-block;
+      margin-bottom: 16px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .ai-tool-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .ai-tool-body {
+      font-size: 13px;
+      color: rgba(255, 255, 255, .5);
+      line-height: 1.6;
+    }
+
+    .ai-philosophy {
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding-top: 40px;
+    }
+
+    .ai-phil-text {
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .85);
+      max-width: 640px;
+      line-height: 1.5;
+    }
+
+    .ai-phil-text em {
+      font-style: normal;
+      color: var(--lime);
+    }
+
+    /* ── WHAT CHANGES ── */
+    .changes-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .changes-left {}
+
+    .changes-right {}
+
+    .changes-list {
+      margin-top: 32px;
+    }
+
+    .change-item {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--bg3);
+    }
+
+    .change-item:first-child {
+      border-top: 1px solid var(--bg3);
+    }
+
+    .change-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ink3);
+      padding-top: 2px;
+      flex-shrink: 0;
+      min-width: 28px;
+    }
+
+    .change-text {}
+
+    .change-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .change-desc {
+      font-size: 13px;
+      color: var(--ink3);
+      line-height: 1.55;
+    }
+
+    .quote-block {
+      background: var(--bg2);
+      border-left: 3px solid var(--lime);
+      padding: 28px 28px;
+      border-radius: 0 var(--r) var(--r) 0;
+      margin-top: 40px;
+    }
+
+    .quote-text {
+      font-family: 'Manrope', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .quote-attr {
+      font-size: 12px;
+      color: var(--ink3);
+    }
+
+    /* ── TRUST ── */
+    .trust-section {
+      background: var(--bg2);
+    }
+
+    .trust-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 32px;
+    }
+
+    .trust-header {
+      text-align: center;
+      max-width: 480px;
+      margin: 0 auto 56px;
+    }
+
+    .trust-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .trust-point {
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .trust-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .trust-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .trust-desc {
+      font-size: 13px;
+      color: var(--ink3);
+      line-height: 1.6;
+    }
+
+    /* ── PATH ── */
+    .path-section {}
+
+    .path-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .path-header {
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto 56px;
+    }
+
+    .path-steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .path-step {
+      border: 1px solid var(--bg3);
+      border-radius: var(--r);
+      padding: 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      cursor: pointer;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .path-step:hover {
+      border-color: var(--navy20);
+      box-shadow: 0 4px 20px rgba(10, 25, 47, .06);
+    }
+
+    .path-step-num {
+      width: 36px;
+      height: 36px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--lime);
+      flex-shrink: 0;
+    }
+
+    .path-step-content {}
+
+    .path-step-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--ink3);
+      margin-bottom: 6px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .path-step-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .path-step-desc {
+      font-size: 13px;
+      color: var(--ink3);
+      line-height: 1.55;
+    }
+
+    .path-arrow {
+      color: var(--ink3);
+      margin-top: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: var(--navy);
+      padding: 96px 0;
+    }
+
+    .final-cta-inner {
+      max-width: var(--max-s);
+      margin: 0 auto;
+      padding: 0 32px;
+      text-align: center;
+    }
+
+    .final-cta-title {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -1px;
+      color: #fff;
+      margin-bottom: 20px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .final-cta-title em {
+      display: inline;
+    }
+
+    .final-cta-title em {
+      font-style: normal;
+      color: var(--lime);
+    }
+
+    .final-cta-sub {
+      font-size: 16px;
+      color: rgba(255, 255, 255, .55);
+      margin-bottom: 40px;
+      line-height: 1.65;
+    }
+
+    .final-cta-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── EMAIL CAPTURE ── */
+    .email-form {
+      display: flex;
+      gap: 0;
+      max-width: 420px;
+    }
+
+    .email-form input {
+      flex: 1;
+      padding: 13px 18px;
+      border: 2px solid var(--bg3);
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      color: var(--navy);
+      background: var(--bg);
+    }
+
+    .email-form input:focus {
+      border-color: var(--navy);
+    }
+
+    .email-form input::placeholder {
+      color: var(--ink3);
+    }
+
+    .email-form button {
+      padding: 13px 22px;
+      background: var(--lime);
+      color: var(--navy);
+      border: none;
+      border-radius: 0 8px 8px 0;
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .15s;
+    }
+
+    .email-form button:hover {
+      background: var(--lime80);
+    }
+
+    .email-form-dark input {
+      background: rgba(255, 255, 255, .08);
+      border-color: rgba(255, 255, 255, .15);
+      color: #fff;
+    }
+
+    .email-form-dark input::placeholder {
+      color: rgba(255, 255, 255, .3);
+    }
+
+    .email-form-dark input:focus {
+      border-color: rgba(255, 255, 255, .4);
+    }
+
+    /* ── WHY PAGE ── */
+    .why-hero {
+      background: var(--bg);
+      padding-top: 140px;
+      padding-bottom: 64px;
+    }
+
+    .why-hero-inner {
+      max-width: var(--max-s);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .why-tension {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      padding: 80px 0;
+    }
+
+    .why-tension-left .h-md {
+      margin-bottom: 20px;
+    }
+
+    .why-tension-right {}
+
+    .why-pullquote {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: var(--navy);
+      border-left: 4px solid var(--lime);
+      padding-left: 24px;
+      margin: 32px 0;
+    }
+
+    .insight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .insight-card {
+      border-radius: var(--r);
+      padding: 24px;
+    }
+
+    .insight-card.plain {
+      border: 1px solid var(--bg3);
+    }
+
+    .insight-card.dark {
+      background: var(--navy);
+    }
+
+    .insight-card.accent {
+      background: var(--lime);
+    }
+
+    .insight-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .insight-card.plain .insight-card-title {
+      color: var(--navy);
+    }
+
+    .insight-card.dark .insight-card-title {
+      color: #fff;
+    }
+
+    .insight-card.accent .insight-card-title {
+      color: var(--navy);
+    }
+
+    .insight-card-body {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .insight-card.plain .insight-card-body {
+      color: var(--ink3);
+    }
+
+    .insight-card.dark .insight-card-body {
+      color: rgba(255, 255, 255, .55);
+    }
+
+    .insight-card.accent .insight-card-body {
+      color: rgba(10, 25, 47, .7);
+    }
+
+    .purpose-section {
+      background: var(--navy);
+      padding: 80px 0;
+    }
+
+    .purpose-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .purpose-text {}
+
+    .purpose-headline {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -.5px;
+      margin-bottom: 20px;
+    }
+
+    .purpose-body {
+      font-size: 15px;
+      color: rgba(255, 255, 255, .6);
+      line-height: 1.7;
+    }
+
+    .purpose-right {}
+
+    .purpose-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .pillar {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .pillar-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--lime);
+      background: rgba(204, 255, 0, .1);
+      padding: 4px 10px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .pillar-text .pillar-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .pillar-text .pillar-desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, .5);
+      line-height: 1.55;
+    }
+
+    /* ── WORK WITH ME ── */
+    .wwm-hero {
+      background: var(--bg);
+      padding-top: 140px;
+      padding-bottom: 0;
+    }
+
+    .wwm-hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .wwm-offer {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 64px;
+      padding-bottom: 64px;
+    }
+
+    .wwm-offer-right {
+      padding-top: 8px;
+    }
+
+    .spots-badge {
+      background: var(--lime);
+      color: var(--navy);
+      border-radius: var(--rs);
+      padding: 16px 20px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .spots-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 6px;
+    }
+
+    .spots-num {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .spots-desc {
+      font-size: 12px;
+      margin-top: 4px;
+      opacity: .7;
+    }
+
+    .fornotfor {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      background: var(--bg2);
+    }
+
+    .fnf-col {
+      padding: 44px 40px;
+    }
+
+    .fnf-col.for {
+      border-right: 1px solid var(--bg3);
+    }
+
+    .fnf-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 24px;
+    }
+
+    .fnf-col.for .fnf-label {
+      color: var(--green, #16a34a);
+    }
+
+    .fnf-col.notfor .fnf-label {
+      color: var(--red, #dc2626);
+    }
+
+    .fnf-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+      color: var(--ink2);
+    }
+
+    .fnf-list .tick {
+      color: #16a34a;
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .fnf-list .cross {
+      color: #dc2626;
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .curriculum {
+      padding: 80px 0;
+    }
+
+    .curriculum-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .curriculum-header {
+      margin-bottom: 48px;
+    }
+
+    .curriculum-modules {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .module {
+      border-radius: var(--r);
+      padding: 24px;
+      border: 1px solid var(--bg3);
+    }
+
+    .module.featured {
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .module-week {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-family: 'Manrope', sans-serif;
+      margin-bottom: 12px;
+    }
+
+    .module .module-week {
+      color: var(--ink3);
+    }
+
+    .module.featured .module-week {
+      color: var(--lime);
+    }
+
+    .module-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .module .module-title {
+      color: var(--navy);
+    }
+
+    .module.featured .module-title {
+      color: #fff;
+    }
+
+    .module-desc {
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .module .module-desc {
+      color: var(--ink3);
+    }
+
+    .module.featured .module-desc {
+      color: rgba(255, 255, 255, .55);
+    }
+
+    .how-different {
+      background: var(--bg2);
+      padding: 64px 0;
+    }
+
+    .hd-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .hd-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .hd-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--bg);
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid var(--bg3);
+    }
+
+    .hd-typical {
+      padding: 20px 22px;
+      border-right: 1px solid var(--bg3);
+    }
+
+    .hd-edge {
+      padding: 20px 22px;
+      background: rgba(10, 25, 47, .02);
+    }
+
+    .hd-row-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-family: 'Manrope', sans-serif;
+      margin-bottom: 8px;
+    }
+
+    .hd-typical .hd-row-label {
+      color: var(--ink3);
+    }
+
+    .hd-edge .hd-row-label {
+      color: var(--navy);
+    }
+
+    .hd-row-text {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .hd-typical .hd-row-text {
+      color: var(--ink3);
+    }
+
+    .hd-edge .hd-row-text {
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .roadmap {
+      padding: 80px 0;
+    }
+
+    .roadmap-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .roadmap-steps {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .roadmap-step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 32px;
+      padding: 32px 0;
+      border-top: 1px solid var(--bg3);
+    }
+
+    .roadmap-step:last-child {
+      border-bottom: 1px solid var(--bg3);
+    }
+
+    .rms-week {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--lime);
+      background: var(--navy);
+      padding: 4px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      height: fit-content;
+    }
+
+    .rms-content {}
+
+    .rms-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .rms-desc {
+      font-size: 14px;
+      color: var(--ink3);
+      line-height: 1.6;
+    }
+
+    .rms-outcome {
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .rms-outcome::before {
+      content: '→';
+      color: var(--lime);
+    }
+
+    /* ── THE WEEKLY EDGE ── */
+    .edge-hero {
+      background: var(--bg);
+      padding-top: 140px;
+      padding-bottom: 64px;
+    }
+
+    .edge-hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .edge-hero-visual {
+      border-radius: var(--r);
+      overflow: hidden;
+      background: var(--navy);
+      padding: 32px;
+      min-height: 280px;
+      aspect-ratio: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .edge-issue-preview {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: var(--rs);
+      padding: 20px;
+      margin-bottom: 16px;
+      flex-shrink: 0;
+    }
+
+    .edge-issue-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--lime);
+      font-family: 'Manrope', sans-serif;
+      margin-bottom: 8px;
+    }
+
+    .edge-issue-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.35;
+      max-width: 100%;
+    }
+
+    .edge-issue-meta {
+      font-size: 12px;
+      color: rgba(255, 255, 255, .4);
+      margin-top: 6px;
+    }
+
+    .edge-sub-count {
+      font-size: 13px;
+      color: rgba(255, 255, 255, .5);
+    }
+
+    .covers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .cover-card {
+      border-radius: var(--r);
+      padding: 24px;
+      border: 1px solid var(--bg3);
+    }
+
+    .cover-card.highlight {
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .cover-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--lime10);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .cover-card.highlight .cover-icon {
+      background: rgba(204, 255, 0, .1);
+    }
+
+    .cover-icon svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .cover-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .cover-card .cover-title {
+      color: var(--navy);
+    }
+
+    .cover-card.highlight .cover-title {
+      color: #fff;
+    }
+
+    .cover-desc {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .cover-card .cover-desc {
+      color: var(--ink3);
+    }
+
+    .cover-card.highlight .cover-desc {
+      color: rgba(255, 255, 255, .55);
+    }
+
+    .format-section {
+      background: var(--bg2);
+      padding: 64px 0;
+    }
+
+    .format-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .format-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--bg3);
+      margin-top: 40px;
+    }
+
+    .format-col {
+      background: var(--bg);
+      padding: 28px 24px;
+    }
+
+    .format-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--lime);
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+
+    .format-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .format-desc {
+      font-size: 13px;
+      color: var(--ink3);
+      line-height: 1.6;
+    }
+
+    .edge-cta-section {
+      background: var(--navy);
+      padding: 80px 0;
+    }
+
+    .edge-cta-inner {
+      max-width: var(--max-s);
+      margin: 0 auto;
+      padding: 0 32px;
+      text-align: center;
+    }
+
+    /* ── APPLY PAGE ── */
+
+
+    .expectations-list {
+      margin-top: 24px;
+    }
+
+    .exp-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 18px 0;
+      border-top: 1px solid var(--bg3);
+    }
+
+    .exp-item:last-child {
+      border-bottom: 1px solid var(--bg3);
+    }
+
+    .exp-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--lime);
+      background: var(--navy);
+      padding: 3px 10px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .exp-text .exp-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--navy);
+    }
+
+    .exp-text .exp-desc {
+      font-size: 13px;
+      color: var(--ink3);
+      line-height: 1.55;
+    }
+
+    .process-step {
+      text-align: center;
+    }
+
+    .ps-num {
+      width: 48px;
+      height: 48px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--lime);
+    }
+
+    .ps-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .ps-desc {
+      font-size: 13px;
+      color: var(--ink3);
+      line-height: 1.55;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--ink2);
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      background: var(--bg2);
+      border: 1.5px solid var(--bg3);
+      border-radius: var(--rs);
+      padding: 11px 14px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      color: var(--navy);
+      outline: none;
+      transition: border .15s;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--navy);
+      background: var(--bg);
+    }
+
+    .form-field textarea {
+      resize: vertical;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: var(--ink3);
+    }
+
+    .form-field select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-color: var(--bg2);
+    }
+
+    .form-submit-row {
+      margin-top: 24px;
+    }
+
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, .5);
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 64px 40px 32px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 0.8fr;
+      gap: 72px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+
+    .footer-brand {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 14px;
+      white-space: nowrap;
+    }
+
+    .footer-brand span {
+      color: var(--lime);
+      margin-left: 4px;
+    }
+
+    .footer-tagline {
+      max-width: 320px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, .4);
+      line-height: 1.7;
+    }
+
+    .footer-col-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(255, 255, 255, .3);
+      margin-bottom: 14px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .footer-link {
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, .5);
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: color .15s;
+    }
+
+    .footer-link:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .06);
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, .3);
+      cursor: pointer;
+    }
+
+    /* ── MOBILE ── */
+    .mobile-nav-panel {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 199;
+      padding: 80px 32px 32px;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mobile-nav-panel.open {
+      display: flex;
+    }
+
+    .mobile-nav-link {
+      padding: 16px 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+      border-bottom: 1px solid var(--bg3);
+      cursor: pointer;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    @media(max-width:900px) {
+      .hero-home {
+        padding-top: 112px;
+      }
+
+      .hero-home-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 24px;
+      }
+
+      .hero-home-text {
+        max-width: 100%;
+      }
+
+      .hero-home-headline {
+        font-size: clamp(42px, 12vw, 58px);
+        line-height: 1.02;
+        letter-spacing: -1.6px;
+      }
+
+      .hero-home-right {
+        display: none;
+      }
+
+      .footer-inner {
+        padding: 48px 24px 28px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .reality-inner,
+      .purpose-inner,
+      .changes-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .who-grid,
+      .shift-grid,
+      .gap-cards,
+      .system-steps,
+      .ai-tools,
+      .path-steps,
+      .why-tension,
+      .insight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .system-steps {
+        gap: 0;
+      }
+
+      .trust-points,
+      .format-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .format-cols {
+        gap: 1px;
+      }
+
+      .wwm-offer {
+        grid-template-columns: 1fr;
+      }
+
+      .fornotfor {
+        grid-template-columns: 1fr;
+      }
+
+      .fnf-col.for {
+        border-right: none;
+        border-bottom: 1px solid var(--bg3);
+      }
+
+      .curriculum-modules,
+      .hd-grid,
+      .roadmap-step {
+        grid-template-columns: 1fr;
+      }
+
+      .edge-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .covers-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .anf-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-mobile {
+        display: flex;
+      }
+    }
+
+    @media(max-width:520px) {
+
+      .wrap,
+      .wrap-s,
+      .wrap-md {
+        padding: 0 20px;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .path-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .final-cta-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .app-form {
+        padding: 24px 20px;
+      }
+
+      .hd-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hd-typical {
+        border-right: none;
+        border-bottom: 1px solid var(--bg3);
+      }
+    }
+
+    /* ── APPLY PAGE ── */
+    .apply-stage {
+      display: none;
+    }
+
+    .apply-stage.active {
+      display: block;
+    }
+
+    /* Progress bar */
+    .apply-progress {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .apply-progress-step {
+      flex: 1;
+      height: 3px;
+      background: var(--bg3);
+      border-radius: 99px;
+      transition: background .4s;
+    }
+
+    .apply-progress-step.done {
+      background: var(--lime);
+    }
+
+    .apply-progress-step.active {
+      background: var(--navy);
+    }
+
+    /* Question card */
+    .q-card {
+      background: var(--white);
+      border: 1px solid var(--n3);
+      border-radius: var(--r);
+      padding: 36px;
+      margin-bottom: 16px;
+    }
+
+    .q-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--ink3);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .q-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.35;
+      margin-bottom: 24px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .q-sub {
+      font-size: 14px;
+      color: var(--ink3);
+      margin-top: -16px;
+      margin-bottom: 24px;
+      line-height: 1.55;
+    }
+
+    /* Choice buttons */
+    .choices {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .choice {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      border: 1.5px solid var(--n3);
+      border-radius: var(--rs);
+      cursor: pointer;
+      transition: border-color .15s, background .15s;
+      background: var(--bg);
+    }
+
+    .choice:hover {
+      border-color: var(--navy20, #d0dae8);
+      background: var(--bg2);
+    }
+
+    .choice.selected {
+      border-color: var(--navy);
+      background: #f0f4fa;
+    }
+
+    .choice.selected .choice-radio {
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .choice.selected .choice-radio::after {
+      opacity: 1;
+    }
+
+    .choice-radio {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--n3);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 2px;
+      position: relative;
+      transition: all .15s;
+    }
+
+    .choice-radio::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--lime);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity .15s;
+    }
+
+    .choice-label {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+
+    .choice-sub {
+      font-size: 12px;
+      color: var(--ink3);
+      margin-top: 3px;
+      line-height: 1.45;
+    }
+
+    /* Textarea */
+    .apply-textarea {
+      width: 100%;
+      background: var(--bg2);
+      border: 1.5px solid var(--n3);
+      border-radius: var(--rs);
+      padding: 14px 16px;
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      color: var(--navy);
+      outline: none;
+      resize: none;
+      transition: border .15s;
+      line-height: 1.65;
+    }
+
+    .apply-textarea:focus {
+      border-color: var(--navy);
+      background: var(--white);
+    }
+
+    .apply-textarea::placeholder {
+      color: var(--ink3);
+    }
+
+    .char-count {
+      font-size: 11px;
+      color: var(--ink3);
+      text-align: right;
+      margin-top: 6px;
+    }
+
+    /* Nav */
+    .apply-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .apply-back {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 0;
+      background: none;
+      border: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .apply-back:hover {
+      color: var(--navy);
+    }
+
+    /* Result screens */
+    .result-screen {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .result-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .result-icon.strong {
+      background: var(--lime);
+    }
+
+    .result-icon.weak {
+      background: var(--bg2);
+    }
+
+    .result-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .cal-embed {
+      background: var(--bg2);
+      border: 1px solid var(--n3);
+      border-radius: var(--r);
+      padding: 32px;
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .cal-embed-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--ink3);
+      font-family: 'Manrope', sans-serif;
+      margin-bottom: 12px;
+    }
+
+    .cal-embed-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .cal-embed-sub {
+      font-size: 14px;
+      color: var(--ink3);
+      margin-bottom: 20px;
+      line-height: 1.55;
+    }
+
+    @media(max-width:600px) {
+      .q-card {
+        padding: 24px 20px;
+      }
+
+      .q-text {
+        font-size: 17px;
+      }
+    }
+
+    .substack-card {
+      max-width: 520px;
+      background: #ffffff;
+      border: 1px solid var(--bg3);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 8px 32px rgba(10, 25, 47, .06);
+    }
+
+    .edge-cta-section .substack-card {
+      margin: 0 auto;
+    }
+
+    .substack-card-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--ink3);
+      margin-bottom: 10px;
+    }
+
+    .substack-card-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .substack-card-copy {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--ink2);
+      margin-bottom: 20px;
+    }
+
+    .wwm-transition-wrap {
+      max-width: 920px;
+      margin: 72px auto 88px;
+      padding: 0 24px;
+    }
+
+    .wwm-transition {
+      background: #f7f7f7;
+      border-left: 4px solid var(--lime);
+      border-radius: 0 14px 14px 0;
+      padding: 26px 32px;
+      box-shadow: 0 8px 28px rgba(10, 25, 47, .04);
+    }
+
+    @media(max-width:700px) {
+      .wwm-transition-wrap {
+        margin: 48px auto 56px;
+        padding: 0 20px;
+      }
+
+      .wwm-transition {
+        padding: 22px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/">The Independent <span>Edge</span></a>
+      <div class="nav-links">
+        <a class="nav-link" id="nl-home" href="/">Home</a>
+        <a class="nav-link" id="nl-wwm" href="/work-with-me">Work With Me</a>
+        <a class="nav-link" id="nl-edge" href="/the-weekly-edge">The Weekly Edge</a>
+        <a class="nav-cta" href="/apply">Apply</a>
+      </div>
+      <div class="nav-mobile">
+        <a class="nav-cta btn-sm" href="/apply">Apply</a>
+        <button class="nav-ham" onclick="toggleMobileNav()" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="#0A192F" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav-panel" id="mobileNav">
+    <a class="mobile-nav-link" href="/">Home</a>
+    <a class="mobile-nav-link" href="/work-with-me">Work With Me</a>
+    <a class="mobile-nav-link" href="/the-weekly-edge">The Weekly Edge</a>
+    <a class="mobile-nav-link"
+      style="color:var(--lime);background:var(--navy);padding:16px;border-radius:8px;border:none;margin-top:12px;text-align:center;"
+      href="/apply">Apply for Coaching</a>
+  </div>
+
+  <div class="page active" id="page-apply">
+
+    <!-- OPENING: not for everyone -->
+    <section style="background:var(--navy);padding-top:120px;padding-bottom:0;">
+      <div class="wrap-s">
+        <div class="fade" style="padding-bottom:64px;">
+          <span
+            style="font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.3);display:block;margin-bottom:16px;">Coaching
+            Application</span>
+          <h1 class="h-xl" style="color:#ffffff;margin-bottom:20px;">Request Access</h1>
+          <p class="body-lg" style="color:rgba(255,255,255,.55);max-width:500px;">This is for a small group of
+            professionals who are serious about changing how they think and operate in conversations. Not everyone gets
+            in.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT THIS REQUIRES + WHO IT IS FOR -->
+    <section style="background:var(--bg);padding:0;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;background:var(--bg);">
+        <div style="padding:56px 48px;border-right:1px solid var(--bg3);" class="fade">
+          <span class="eyebrow">What this requires</span>
+          <h2 class="h-sm" style="margin-bottom:20px;color:var(--navy);">Apply if:</h2>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <div
+                style="width:22px;height:22px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+                <svg width="9" height="9" fill="none" viewBox="0 0 24 24">
+                  <path stroke="var(--lime)" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg></div>
+              <div>
+                <div style="font-size:15px;font-weight:700;color:var(--navy);">Weekly practice</div>
+                <div style="font-size:13px;color:var(--ink3);margin-top:2px;">Consistent weekly effort. This is
+                  structured, not passive.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <div
+                style="width:22px;height:22px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+                <svg width="9" height="9" fill="none" viewBox="0 0 24 24">
+                  <path stroke="var(--lime)" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg></div>
+              <div>
+                <div style="font-size:15px;font-weight:700;color:var(--navy);">Real conversations</div>
+                <div style="font-size:13px;color:var(--ink3);margin-top:2px;">You are willing to be uncomfortable.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <div
+                style="width:22px;height:22px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+                <svg width="9" height="9" fill="none" viewBox="0 0 24 24">
+                  <path stroke="var(--lime)" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg></div>
+              <div>
+                <div style="font-size:15px;font-weight:700;color:var(--navy);">Discomfort</div>
+                <div style="font-size:13px;color:var(--ink3);margin-top:2px;">You are ready to be challenged directly.
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <div
+                style="width:22px;height:22px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+                <svg width="9" height="9" fill="none" viewBox="0 0 24 24">
+                  <path stroke="var(--lime)" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg></div>
+              <div>
+                <div style="font-size:15px;font-weight:700;color:var(--navy);">No scripts</div>
+                <div style="font-size:13px;color:var(--ink3);margin-top:2px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:56px 48px;" class="fade fade-delay-2">
+          <span class="eyebrow">Who this is for</span>
+          <h2 class="h-sm" style="margin-bottom:20px;color:var(--navy);">Do not apply if:</h2>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <div style="width:6px;height:6px;background:var(--lime);border-radius:50%;flex-shrink:0;margin-top:8px;">
+              </div>
+              <div style="font-size:14px;color:var(--ink2);line-height:1.55;">You are a corporate professional with 4–12
+                years of experience and existing expertise worth packaging</div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <div style="width:6px;height:6px;background:var(--lime);border-radius:50%;flex-shrink:0;margin-top:8px;">
+              </div>
+              <div style="font-size:14px;color:var(--ink2);line-height:1.55;">You avoid pressure</div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <div style="width:6px;height:6px;background:var(--lime);border-radius:50%;flex-shrink:0;margin-top:8px;">
+              </div>
+              <div style="font-size:14px;color:var(--ink2);line-height:1.55;">You are not ready to act</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT HAPPENS NEXT -->
+    <section style="background:var(--bg2);padding:56px 0;border-top:1px solid var(--bg3);">
+      <div class="wrap">
+        <div class="fade" style="text-align:center;margin-bottom:40px;">
+          <span class="eyebrow" style="display:block;text-align:center;">What happens next</span>
+          <h2 class="h-sm" style="text-align:center;color:var(--navy);">What happens after you apply.</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;" class="fade fade-delay-1">
+          <div style="text-align:center;padding:24px 16px;">
+            <div
+              style="width:40px;height:40px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:'Manrope',sans-serif;font-size:14px;font-weight:800;color:var(--lime);">
+              1</div>
+            <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;">Fill the application</div>
+            <div style="font-size:12px;color:var(--ink3);line-height:1.55;">5 focused questions. Takes 4 minutes.
+              Designed to help you think, not just fill a form.</div>
+          </div>
+          <div style="text-align:center;padding:24px 16px;">
+            <div
+              style="width:40px;height:40px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:'Manrope',sans-serif;font-size:14px;font-weight:800;color:var(--lime);">
+              2</div>
+            <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;">If relevant, calendar
+              unlocks</div>
+            <div style="font-size:12px;color:var(--ink3);line-height:1.55;">Your answers determine the next step. If
+              there is clear fit, you will see a booking link immediately.</div>
+          </div>
+          <div style="text-align:center;padding:24px 16px;">
+            <div
+              style="width:40px;height:40px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:'Manrope',sans-serif;font-size:14px;font-weight:800;color:var(--lime);">
+              3</div>
+            <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;">Book a focused call</div>
+            <div style="font-size:12px;color:var(--ink3);line-height:1.55;">Not a pressure call. A focused fit
+              conversation.</div>
+          </div>
+          <div style="text-align:center;padding:24px 16px;">
+            <div
+              style="width:40px;height:40px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:'Manrope',sans-serif;font-size:14px;font-weight:800;color:var(--lime);">
+              4</div>
+            <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;">We decide together</div>
+            <div style="font-size:12px;color:var(--ink3);line-height:1.55;">If it makes sense for both sides, we move
+              forward. If it does not, you will know clearly why.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section style="background:var(--bg);padding:64px 0 80px;">
+      <div style="max-width:640px;margin:0 auto;padding:0 32px;">
+
+        <!-- Stage 0: Intro CTA -->
+        <div class="apply-stage active" id="apply-s0">
+          <div class="fade">
+            <h2 class="h-md" style="margin-bottom:12px;text-align:center;">Ready to apply?</h2>
+            <p class="body-md" style="text-align:center;max-width:440px;margin:0 auto 32px;">5 questions. Takes about 4
+              minutes. Answer honestly, these questions exist to help both of us figure out if this is the right fit.
+            </p>
+            <div style="text-align:center;">
+              <button class="btn btn-dark btn-lg" onclick="applyGoTo(1)">Request Access</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 1: Who are you -->
+        <div class="apply-stage" id="apply-s1">
+          <div class="apply-progress" id="apply-prog"></div>
+          <div class="q-card">
+            <span class="q-label">Question 1 of 5</span>
+            <div class="q-text">Which of these describes you best right now?</div>
+            <div class="choices" id="q1-choices">
+              <div class="choice" onclick="applySelect(this,'q1',3)" data-val="3">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">Corporate professional, 4–12 years experience</div>
+                  <div class="choice-sub">Working in a company, want to build something on the side</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q1',3)" data-val="3">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">Experienced professional, already consulting or freelancing</div>
+                  <div class="choice-sub">Working independently but struggling to close or grow consistently</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q1',1)" data-val="1">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">Early in my career or still exploring</div>
+                  <div class="choice-sub">Less than 3 years experience, figuring out direction</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q1',1)" data-val="1">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">Not sure where I fit</div>
+                  <div class="choice-sub">Still deciding if this is relevant to me</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="apply-nav">
+            <button class="apply-back" onclick="applyGoTo(0)"><svg width="12" height="12" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-width="2" d="M19 12H5M5 12l7-7M5 12l7 7" />
+              </svg> Back</button>
+            <button class="btn btn-dark" id="q1-next" onclick="applyGoTo(2)" disabled>Next</button>
+          </div>
+        </div>
+
+        <!-- Stage 2: Biggest blocker -->
+        <div class="apply-stage" id="apply-s2">
+          <div class="apply-progress" id="apply-prog2"></div>
+          <div class="q-card">
+            <span class="q-label">Question 2 of 5</span>
+            <div class="q-text">What is the single biggest thing stopping you in conversations right now?</div>
+            <div class="choices" id="q2-choices">
+              <div class="choice" onclick="applySelect(this,'q2',3)" data-val="3">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">I know what to say but it does not come out right</div>
+                  <div class="choice-sub">In my head it is clear, in the actual conversation, I lose the thread</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q2',3)" data-val="3">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">I avoid pushing conversations toward a decision</div>
+                  <div class="choice-sub">It feels pushy or unnatural, so I let things drift</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q2',3)" data-val="3">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">I hesitate when money or pricing comes up</div>
+                  <div class="choice-sub">The conversation loses momentum at the worst moment</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q2',1)" data-val="1">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">I do not think I have a conversation problem</div>
+                  <div class="choice-sub">I am mostly here to learn more about selling in general</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="apply-nav">
+            <button class="apply-back" onclick="applyGoTo(1)"><svg width="12" height="12" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-width="2" d="M19 12H5M5 12l7-7M5 12l7 7" />
+              </svg> Back</button>
+            <button class="btn btn-dark" id="q2-next" onclick="applyGoTo(3)" disabled>Next</button>
+          </div>
+        </div>
+
+        <!-- Stage 3: Willingness to practice -->
+        <div class="apply-stage" id="apply-s3">
+          <div class="apply-progress" id="apply-prog3"></div>
+          <div class="q-card">
+            <span class="q-label">Question 3 of 5</span>
+            <div class="q-text">This program involves uncomfortable practice, direct feedback on how you communicate,
+              and private review of real situations. Are you ready for that?</div>
+            <div class="choices" id="q3-choices">
+              <div class="choice" onclick="applySelect(this,'q3',3)" data-val="3">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">Yes. I understand that discomfort is part of it</div>
+                  <div class="choice-sub">I would rather be uncomfortable for a while than stay stuck for years</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q3',2)" data-val="2">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">Probably yes. I have some hesitation but I am willing</div>
+                  <div class="choice-sub">I know I need to do this, even if it feels awkward at first</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q3',1)" data-val="1">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">I am not sure. I prefer to learn before I practice</div>
+                  <div class="choice-sub">I would like to understand more before committing to active practice</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q3',0)" data-val="0">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">No. I am not comfortable with that kind of feedback</div>
+                  <div class="choice-sub">I would prefer a more observational style of learning</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="apply-nav">
+            <button class="apply-back" onclick="applyGoTo(2)"><svg width="12" height="12" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-width="2" d="M19 12H5M5 12l7-7M5 12l7 7" />
+              </svg> Back</button>
+            <button class="btn btn-dark" id="q3-next" onclick="applyGoTo(4)" disabled>Next</button>
+          </div>
+        </div>
+
+        <!-- Stage 4: Timeline -->
+        <div class="apply-stage" id="apply-s4">
+          <div class="apply-progress" id="apply-prog4"></div>
+          <div class="q-card">
+            <span class="q-label">Question 4 of 5</span>
+            <div class="q-text">How urgently do you want to fix this?</div>
+            <div class="q-sub">Be honest. This is not a trick question, it helps us understand where you are.</div>
+            <div class="choices" id="q4-choices">
+              <div class="choice" onclick="applySelect(this,'q4',3)" data-val="3">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">This is already costing me. I want to start in the next 30 days</div>
+                  <div class="choice-sub">I am losing conversations, income, or opportunities right now</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q4',2)" data-val="2">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">I am ready in the next 1–2 months</div>
+                  <div class="choice-sub">I want to prepare properly before committing</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q4',1)" data-val="1">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">Sometime in the next 3–6 months</div>
+                  <div class="choice-sub">I am still thinking about whether this is the right time</div>
+                </div>
+              </div>
+              <div class="choice" onclick="applySelect(this,'q4',0)" data-val="0">
+                <div class="choice-radio"></div>
+                <div>
+                  <div class="choice-label">I am just exploring what is out there</div>
+                  <div class="choice-sub">No urgency, no specific timeline</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="apply-nav">
+            <button class="apply-back" onclick="applyGoTo(3)"><svg width="12" height="12" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-width="2" d="M19 12H5M5 12l7-7M5 12l7 7" />
+              </svg> Back</button>
+            <button class="btn btn-dark" id="q4-next" onclick="applyGoTo(5)" disabled>Next</button>
+          </div>
+        </div>
+
+        <!-- Stage 5: Why now -->
+        <div class="apply-stage" id="apply-s5">
+          <div class="apply-progress" id="apply-prog5"></div>
+          <div class="q-card">
+            <span class="q-label">Question 5 of 5</span>
+            <div class="q-text">In 2–3 sentences, what specifically made you look this up today?</div>
+            <div class="q-sub">This is the most important question. A thoughtful answer matters more here than a
+              polished one.</div>
+            <textarea class="apply-textarea" id="q5-text" rows="5" maxlength="500"
+              placeholder="What happened recently, or what have you been sitting with, that brought you here?"
+              oninput="applyTextUpdate()"></textarea>
+            <div class="char-count"><span id="q5-count">0</span> / 500 <span id="q5-hint" style="margin-left:6px;font-weight:600;"></span></div>
+          </div>
+          <div class="apply-nav">
+            <button class="apply-back" onclick="applyGoTo(4)"><svg width="12" height="12" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-width="2" d="M19 12H5M5 12l7-7M5 12l7 7" />
+              </svg> Back</button>
+            <button class="btn btn-dark" id="q5-next" onclick="applySubmit()" disabled>Submit Application</button>
+          </div>
+        </div>
+
+        <!-- Stage 6: EMAIL CAPTURE (mandatory before result) -->
+        <div class="apply-stage" id="apply-s6">
+          <div class="apply-progress" id="apply-prog6"></div>
+          <div class="q-card">
+            <span class="q-label">One last step</span>
+            <div class="q-text">Where should we send your result?</div>
+            <div class="q-sub">Your name and email. That is all. No newsletters unless you opt in separately.</div>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-top:4px;">
+              <div>
+                <label
+                  style="font-family:'Manrope',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);display:block;margin-bottom:7px;">Full
+                  Name</label>
+                <input type="text" id="capture-name" class="apply-textarea"
+                  style="resize:none;padding:12px 14px;font-size:15px;" placeholder="Your name"
+                  oninput="applyCaptureCheck()" />
+              </div>
+              <div>
+                <label
+                  style="font-family:'Manrope',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);display:block;margin-bottom:7px;">Email
+                  Address</label>
+                <input type="email" id="capture-email" class="apply-textarea"
+                  style="resize:none;padding:12px 14px;font-size:15px;" placeholder="your@email.com"
+                  oninput="applyCaptureCheck()" />
+              </div>
+              <div>
+                <label
+                  style="font-family:'Manrope',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);display:block;margin-bottom:7px;">Phone
+                  Number</label>
+                <input type="tel" id="capture-phone" class="apply-textarea"
+                  style="resize:none;padding:12px 14px;font-size:15px;" placeholder="+91 98765 43210"
+                  oninput="applyCaptureCheck()" />
+                <div style="font-size:11px;color:var(--ink3);margin-top:6px;">We may reach out directly if your
+                  application looks like a strong fit.</div>
+              </div>
+            </div>
+          </div>
+          <div class="apply-nav">
+            <button class="apply-back" onclick="applyGoTo(5)"><svg width="12" height="12" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-width="2" d="M19 12H5M5 12l7-7M5 12l7 7" />
+              </svg> Back</button>
+            <button class="btn btn-dark" id="capture-next" onclick="applyShowResult()" disabled>See My Result</button>
+          </div>
+        </div>
+
+        <!-- Stage 7a: STRONG (score >= 10) -->
+        <div class="apply-stage" id="apply-strong">
+          <div class="result-screen">
+            <div class="result-icon strong">
+              <svg fill="none" viewBox="0 0 24 24">
+                <path stroke="#0A192F" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h2 class="h-md" style="margin-bottom:12px;">Your application looks like a strong fit.</h2>
+            <p class="body-md" style="max-width:460px;margin:0 auto 28px;">Based on your answers, this looks relevant for where you are. The next step is a focused founder call to see if this is the right fit.</p>
+            <div class="cal-embed fade">
+              <div class="cal-embed-label">Next step</div>
+              <div class="cal-embed-title">Focused Founder Call</div>
+              <div class="cal-embed-sub">Come prepared. Think of one specific conversation in the last 3 months where
+                you did not get the outcome you wanted.</div>
+              <a id="strong-cal-link" href="https://cal.id/theindependentedge/connect-with-founder?overlayCalendar=true" target="_blank" rel="noopener" class="btn btn-dark btn-lg" style="margin-top:8px;display:inline-flex;">
+                <svg width="15" height="15" fill="none" viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="white" stroke-width="2" />
+                  <path stroke="white" stroke-width="2" d="M16 2v4M8 2v4M3 10h18" />
+                </svg>
+                Book Founder Call
+              </a>
+              <p style="font-size:12px;color:var(--ink3);margin-top:12px;">Opens in a new tab.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 7b: MEDIUM (score 7-9) -->
+        <div class="apply-stage" id="apply-medium">
+          <div class="result-screen">
+            <div class="result-icon" style="background:var(--amb-bg,#fef3c7);">
+              <svg fill="none" viewBox="0 0 24 24">
+                <path stroke="#d97706" stroke-width="2" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 class="h-md" style="margin-bottom:12px;">You may be a fit, but this work requires serious effort.</h2>
+            <p class="body-md" style="max-width:460px;margin:0 auto 24px;">This is not passive learning. It requires consistency, discomfort, and willingness to be corrected.</p>
+            <div
+              style="background:var(--bg2);border:1px solid var(--bg3);border-radius:var(--r);padding:24px 28px;max-width:460px;margin:0 auto 24px;text-align:left;">
+              <div
+                style="font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);margin-bottom:14px;">
+                This requires</div>
+              <div style="display:flex;flex-direction:column;gap:12px;">
+                <div style="display:flex;gap:12px;align-items:flex-start;">
+                  <div
+                    style="width:6px;height:6px;background:var(--navy);border-radius:50%;flex-shrink:0;margin-top:7px;">
+                  </div>
+                  <div style="font-size:14px;color:var(--ink2);line-height:1.55;">This is not passive learning. You will
+                    be expected to practice out loud, record yourself, and submit real conversations for review every
+                    week.</div>
+                </div>
+                <div style="display:flex;gap:12px;align-items:flex-start;">
+                  <div
+                    style="width:6px;height:6px;background:var(--navy);border-radius:50%;flex-shrink:0;margin-top:7px;">
+                  </div>
+                  <div style="font-size:14px;color:var(--ink2);line-height:1.55;">Weekly execution is non-negotiable.
+                    Missing sessions means missing the compounding effect. This only works if you show up consistently.
+                  </div>
+                </div>
+                <div style="display:flex;gap:12px;align-items:flex-start;">
+                  <div
+                    style="width:6px;height:6px;background:var(--navy);border-radius:50%;flex-shrink:0;margin-top:7px;">
+                  </div>
+                  <div style="font-size:14px;color:var(--ink2);line-height:1.55;">This is not for quick money. If your
+                    primary goal is fast income, the timeline will disappoint you. Skill takes longer to build than most
+                    people expect.</div>
+                </div>
+              </div>
+            </div>
+            <p style="font-size:13px;color:var(--ink3);max-width:420px;margin:0 auto 24px;">If you have read that and
+              you are still in, book the call. If any of it made you hesitate, start with the newsletter first.</p>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+              <a id="medium-cal-link" href="https://cal.id/theindependentedge/connect-with-founder?overlayCalendar=true" target="_blank" rel="noopener" class="btn btn-dark btn-lg" style="display:inline-flex;">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="white" stroke-width="2" />
+                  <path stroke="white" stroke-width="2" d="M16 2v4M8 2v4M3 10h18" />
+                </svg>
+                Book Founder Call
+              </a>
+              <a class="btn btn-outline btn-lg" href="/the-weekly-edge">Start with Newsletter</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 7c: WEAK (score < 7) -->
+        <div class="apply-stage" id="apply-weak">
+          <div class="result-screen">
+            <div class="result-icon weak">
+              <svg fill="none" viewBox="0 0 24 24">
+                <path stroke="var(--ink2)" stroke-width="2"
+                  d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </div>
+            <h2 class="h-md" style="margin-bottom:12px;color:var(--navy);">This is not the right fit yet.</h2>
+            <p class="body-md" style="max-width:460px;margin:0 auto 28px;">Based on your answers, this program is
+              unlikely to be the right next step right now. That is not a judgement, it is about timing and fit.</p>
+            <div
+              style="background:var(--navy);border-radius:var(--r);padding:28px 32px;text-align:left;max-width:460px;margin:0 auto;">
+              <div
+                style="font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;color:#ffffff;margin-bottom:10px;">
+                A better starting point</div>
+              <p style="font-size:14px;color:rgba(255,255,255,.6);line-height:1.65;margin-bottom:20px;">The Weekly Edge
+                newsletter covers sales psychology, communication, and commercial thinking, one clear insight per week.
+                Free, and a better fit for where you are right now.</p>
+              <a class="btn btn-primary" href="https://theindependentedge.substack.com/" target="_blank" rel="noopener">Subscribe on Substack</a>
+            </div>
+            <p style="font-size:13px;color:var(--ink3);margin-top:20px;">Think your answers did not reflect where you
+              are? <span style="text-decoration:underline;cursor:pointer;color:var(--navy);font-weight:600;"
+                onclick="applyReset()">Start again.</span></p>
+          </div>
+        </div>
+
+</div>
+    </section>
+
+    <!-- FINAL REINFORCEMENT -->
+    <section style="background:var(--bg2);padding:48px 0;border-top:1px solid var(--bg3);">
+      <div class="wrap-s">
+        <div class="fade" style="text-align:center;">
+          <p style="font-size:16px;color:var(--ink2);line-height:1.7;max-width:480px;margin:0 auto;">If this resonates,
+            apply. We will take it from there.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- end apply -->
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">The Independent <span>Edge</span></div>
+          <div class="footer-tagline">Built for Indian corporate professionals who want more control over income and
+            more confidence in high stakes conversations.</div>
+        </div>
+        <div>
+          <div class="footer-col-label">Content</div>
+          <a class="footer-link" href="/the-weekly-edge">The Weekly Edge</a>
+          <a class="footer-link" href="/work-with-me">Work With Me</a>
+          <a class="footer-link" href="/apply">Apply</a>
+        </div>
+        <div>
+          <div class="footer-col-label">Connect</div>
+          <a class="footer-link" href="https://www.linkedin.com/in/prannoykumar/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="footer-link" href="https://x.com/maverickprannoy" target="_blank" rel="noopener">X (Twitter)</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 The Independent Edge. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // URL MAP - fallback if any leftover onclick="showPage('x')" calls remain
+    function showPage(name) {
+      var urls = { 'home': '/', 'wwm': '/work-with-me', 'edge': '/the-weekly-edge', 'apply': '/apply', 'why': '/' };
+      if (urls[name]) window.location.href = urls[name];
+    }
+
+    // MOBILE NAV
+    function toggleMobileNav() {
+      var el = document.getElementById('mobileNav');
+      if (el) el.classList.toggle('open');
+    }
+
+    // FADE ON SCROLL
+    function initFades() {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.fade:not(.in)').forEach(function (el) {
+        observer.observe(el);
+      });
+    }
+
+    // EMAIL SIGNUP (home)
+    function handleEmailSignup() {
+      var emailEl = document.getElementById('emailHome');
+      if (!emailEl) return;
+      var email = emailEl.value;
+      if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+      window.open('https://theindependentedge.substack.com/', '_blank');
+    }
+    // EMAIL SIGNUP (edge)
+    function handleEmailSignupEdge() {
+      var emailEl = document.getElementById('emailEdge');
+      if (!emailEl) return;
+      var email = emailEl.value;
+      if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+      window.open('https://theindependentedge.substack.com/', '_blank');
+    }
+    function showThankYou(type) {
+      var msg = type === 'Newsletter'
+        ? 'Welcome to The Weekly Edge. Check your inbox for a confirmation.'
+        : 'Application submitted. If there is a strong fit, you will see a booking link immediately.';
+      var toast = document.createElement('div');
+      toast.style.cssText = 'position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:#0A192F;color:#fff;padding:14px 28px;border-radius:10px;font-family:Manrope,sans-serif;font-size:14px;font-weight:600;z-index:9999;box-shadow:0 8px 32px rgba(0,0,0,.2);border:1px solid rgba(204,255,0,.3);';
+      toast.textContent = msg;
+      document.body.appendChild(toast);
+      setTimeout(function () { toast.remove(); }, 4000);
+    }
+    function handleApplicationSubmit(e) {
+      e.preventDefault();
+      showThankYou('Application');
+    }
+
+    // ============================================================
+    // APPLY PAGE LOGIC
+    // ============================================================
+    var applyAnswers = { q1: null, q2: null, q3: null, q4: null, q5: 0 };
+    var applyChoices = { q1: null, q2: null, q3: null, q4: null, q5: null };  // 0-3 index of choice clicked
+    var applyScore = 0;
+
+    // INTERPRETATION TABLES
+    // For Q1 and Q2, two options can share the same score, so we map by choice index.
+    // For Q3, Q4, Q5, each score maps uniquely.
+    var Q1_LABELS = {
+      0: 'Corporate professional (4-12y)',
+      1: 'Experienced consultant/freelancer',
+      2: 'Early career (<3y)',
+      3: 'Exploring / undecided'
+    };
+    var Q2_LABELS = {
+      0: 'Mind-to-mouth execution gap',
+      1: 'Avoids decision pressure',
+      2: 'Money/pricing hesitation',
+      3: 'Unaware of conversation gap'
+    };
+    var Q3_LABELS = {
+      3: 'Low avoidance (ready)',
+      2: 'Moderate avoidance',
+      1: 'High avoidance',
+      0: 'Very high avoidance'
+    };
+    var Q4_LABELS = {
+      3: 'Immediate (30 days)',
+      2: 'Near-term (1-2 months)',
+      1: 'Distant (3-6 months)',
+      0: 'Passive exploration'
+    };
+    var Q5_LABELS = {
+      3: 'High commitment (detailed)',
+      2: 'Moderate commitment',
+      0: 'Low commitment (brief)'
+    };
+
+    function deriveCoreProblem(scores, choices) {
+      // Order: most decisive signal first
+      if (scores.q3 !== null && scores.q3 <= 1) return 'Avoids pressure conversations';
+      if (scores.q4 === 0) return 'Wants change but avoids action';
+      if (choices.q2 === 2) return 'Money and pricing confidence gap';
+      if ((choices.q1 === 0 || choices.q1 === 1) && choices.q2 === 0) return 'Established career but cognitive-execution gap';
+      if ((choices.q1 === 2 || choices.q1 === 3) && scores.q4 === 3) return 'High intent, low repetition experience';
+      if (choices.q2 === 3) return 'Limited self-awareness of gap';
+      if (scores.q5 === 0) return 'Low commitment in stated reason';
+      return 'General commercial confidence gap';
+    }
+
+    function deriveRecommendedPath(category) {
+      if (category === 'strong') return 'Founder Call';
+      if (category === 'medium') return 'Nurture';
+      return 'Weekly Edge';
+    }
+
+    function deriveStatus(category) {
+      if (category === 'strong') return 'Founder Call Pending';
+      if (category === 'medium') return 'Review Needed';
+      return 'Newsletter';
+    }
+
+    // ---------- STAGE NAVIGATION ----------
+    function applyGoTo(stage) {
+      document.querySelectorAll('.apply-stage').forEach(function (s) { s.classList.remove('active'); });
+      var el = document.getElementById('apply-s' + stage);
+      if (el) { el.classList.add('active'); }
+      updateProgress(stage);
+      applyScrollTop();
+    }
+
+    // FIXED: scroll only what is needed to bring active card into view.
+    // No more snap to top of section. Uses block: 'nearest' so already-visible
+    // cards do not trigger any scroll at all.
+    function applyScrollTop() {
+      var active = document.querySelector('.apply-stage.active');
+      if (active) {
+        active.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function applyShowStage(id) {
+      document.querySelectorAll('.apply-stage').forEach(function (s) { s.classList.remove('active'); });
+      var el = document.getElementById(id);
+      if (el) { el.classList.add('active'); }
+      applyScrollTop();
+    }
+
+    function updateProgress(stage) {
+      if (stage < 1 || stage > 6) return;
+      var progId = stage === 1 ? 'apply-prog' : 'apply-prog' + stage;
+      var el = document.getElementById(progId);
+      if (!el) return;
+      var html = '';
+      for (var i = 1; i <= 6; i++) {
+        var cls = i < stage ? 'done' : i === stage ? 'active' : '';
+        html += '<div class="apply-progress-step ' + cls + '"></div>';
+      }
+      el.innerHTML = html;
+    }
+
+    // applySelect now captures the choice index (position of the .choice within .choices)
+    // so we can map back to a readable label even when two choices share a score.
+    function applySelect(el, qKey, val) {
+      var parent = el.closest('.choices');
+      var idx = Array.prototype.indexOf.call(parent.children, el);
+      parent.querySelectorAll('.choice').forEach(function (c) { c.classList.remove('selected'); });
+      el.classList.add('selected');
+      applyAnswers[qKey] = val;
+      applyChoices[qKey] = idx;
+      var nextBtn = document.getElementById(qKey + '-next');
+      if (nextBtn) nextBtn.disabled = false;
+    }
+
+    function applyTextUpdate() {
+      var ta = document.getElementById('q5-text');
+      var count = ta.value.length;
+      document.getElementById('q5-count').textContent = count;
+      var nextBtn = document.getElementById('q5-next');
+      if (nextBtn) nextBtn.disabled = count < 30;
+      applyAnswers.q5 = count >= 80 ? 3 : count >= 30 ? 2 : 0;
+      applyChoices.q5 = applyAnswers.q5;  // for q5, score is the label key
+      // Show inline hint so user knows why submit is locked
+      var hint = document.getElementById('q5-hint');
+      if (hint) {
+        if (count === 0) {
+          hint.textContent = '';
+        } else if (count < 30) {
+          hint.textContent = '— need at least 30 characters to continue (' + (30 - count) + ' more)';
+          hint.style.color = '#b91c1c';
+        } else if (count < 80) {
+          hint.textContent = '— good, longer answers strengthen your application';
+          hint.style.color = '#15803d';
+        } else {
+          hint.textContent = '— strong answer ✓';
+          hint.style.color = '#15803d';
+        }
+      }
+    }
+
+    function applySubmit() {
+      var text = (document.getElementById('q5-text').value || '').trim();
+      applyAnswers.q5 = text.length >= 80 ? 3 : text.length >= 30 ? 2 : 0;
+      applyChoices.q5 = applyAnswers.q5;
+      applyScore = (applyAnswers.q1 || 0) + (applyAnswers.q2 || 0) + (applyAnswers.q3 || 0) + (applyAnswers.q4 || 0) + applyAnswers.q5;
+      applyGoTo(6);
+    }
+
+    function applyCaptureCheck() {
+      var name = (document.getElementById('capture-name').value || '').trim();
+      var email = (document.getElementById('capture-email').value || '').trim();
+      var phone = (document.getElementById('capture-phone').value || '').replace(/[\s+\-().]/g, '');
+      var btn = document.getElementById('capture-next');
+      var validEmail = email.indexOf('@') > 0 && email.lastIndexOf('.') > email.indexOf('@');
+      var validPhone = /^\d{10,15}$/.test(phone);
+      if (btn) btn.disabled = !(name.length >= 2 && validEmail && validPhone);
+    }
+
+    // Append name + email to the Cal link on the result CTAs (phone stays in payload only)
+    function decorateCalLinks(name, email) {
+      var qs = '?overlayCalendar=true';
+      if (name) qs += '&name=' + encodeURIComponent(name);
+      if (email) qs += '&email=' + encodeURIComponent(email);
+      var base = 'https://cal.id/theindependentedge/connect-with-founder';
+      ['strong-cal-link', 'medium-cal-link'].forEach(function (id) {
+        var a = document.getElementById(id);
+        if (a) a.href = base + qs;
+      });
+    }
+
+    function applyShowResult() {
+      var name = (document.getElementById('capture-name').value || '').trim();
+      var email = (document.getElementById('capture-email').value || '').trim();
+      var phone = (document.getElementById('capture-phone').value || '').replace(/[\s+\-().]/g, '').trim();
+      var category = applyScore >= 10 ? 'strong' : applyScore >= 7 ? 'medium' : 'weak';
+      var fitCategoryLabel = category === 'strong' ? 'Strong Fit' : category === 'medium' ? 'Medium Fit' : 'Weak Fit';
+
+      // Build the structured payload. ORDER MATCHES the Google Sheet columns.
+      // If you change the order here, you MUST update the Apps Script in lockstep.
+      var payload = {
+        timestamp: new Date().toISOString(),
+        name: name,
+        email: email,
+        phone: phone,
+        totalScore: applyScore,
+        fitCategory: fitCategoryLabel,
+        q1Score: applyAnswers.q1 || 0,
+        q2Score: applyAnswers.q2 || 0,
+        q3Score: applyAnswers.q3 || 0,
+        q4Score: applyAnswers.q4 || 0,
+        q5Score: applyAnswers.q5 || 0,
+        experienceLevel: Q1_LABELS[applyChoices.q1] || 'Not answered',
+        conversationConfidence: Q2_LABELS[applyChoices.q2] || 'Not answered',
+        pressureAvoidance: Q3_LABELS[applyAnswers.q3] || 'Not answered',
+        actionOrientation: Q4_LABELS[applyAnswers.q4] || 'Not answered',
+        commitmentLevel: Q5_LABELS[applyAnswers.q5] || 'Not answered',
+        coreProblem: deriveCoreProblem(applyAnswers, applyChoices),
+        recommendedPath: deriveRecommendedPath(category),
+        status: deriveStatus(category)
+      };
+
+      console.log('Lead payload:', payload);
+      fetch('https://script.google.com/macros/s/AKfycbwZ_uu-84n5H5PtJF2R0Rv8aJHb7eXQfh_3MJN6iL3Mj2AM3lstzWv91WBaU0spk8pu/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(function (e) { console.warn('Sheet sync failed:', e); });
+
+      // Pre-fill the Cal links with the lead's name and email
+      decorateCalLinks(name, email);
+
+      if (category === 'strong') {
+        applyShowStage('apply-strong');
+      } else if (category === 'medium') {
+        applyShowStage('apply-medium');
+      } else {
+        applyShowStage('apply-weak');
+      }
+    }
+
+    function applyReset() {
+      applyAnswers = { q1: null, q2: null, q3: null, q4: null, q5: 0 };
+      applyChoices = { q1: null, q2: null, q3: null, q4: null, q5: null };
+      applyScore = 0;
+      document.querySelectorAll('.apply-stage .choice').forEach(function (c) { c.classList.remove('selected'); });
+      document.querySelectorAll('.apply-stage button[id$="-next"]').forEach(function (b) { b.disabled = true; });
+      var ta = document.getElementById('q5-text');
+      if (ta) ta.value = '';
+      var cc = document.getElementById('q5-count');
+      if (cc) cc.textContent = '0';
+      var cn = document.getElementById('capture-name');
+      if (cn) cn.value = '';
+      var ce = document.getElementById('capture-email');
+      if (ce) ce.value = '';
+      var cp = document.getElementById('capture-phone');
+      if (cp) cp.value = '';
+      var cb = document.getElementById('capture-next');
+      if (cb) cb.disabled = true;
+      applyGoTo(0);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      initFades();
+    });
+    window.addEventListener('scroll', function () {
+      initFades();
+    }, { passive: true });
+  </script>
+</body>
+
+</html>
