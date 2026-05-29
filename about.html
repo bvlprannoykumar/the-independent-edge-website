@@ -15,7 +15,7 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://theindependentedge.in/about" />
 
-  <!-- Open Graph / Facebook / LinkedIn -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://theindependentedge.in/about" />
   <meta property="og:title" content="About | The Independent Edge" />
@@ -33,9 +33,14 @@
   <meta name="twitter:description" content="Learn why The Independent Edge was created, the experience behind it, and the philosophy that shapes how professionals build communication, sales ability, and commercial thinking." />
   <meta name="twitter:image" content="https://theindependentedge.in/og-default.jpg" />
 
-  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
-  <!-- Structured Data: Person + Organization -->
+  <!-- Structured Data: Person + Organization + AboutPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2819,6 +2824,155 @@
       }
     }
   </style>
+
+  <style>
+  /* About page hero grid only - page-scoped */
+  .about-hero {
+    background: var(--bg);
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+  .about-hero-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .about-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    grid-template-areas:
+      "heading image"
+      "copy    image";
+    gap: 56px;
+    align-items: start;
+  }
+  .about-hero-heading { grid-area: heading; max-width: 680px; }
+  .about-hero-copy    { grid-area: copy;    max-width: 600px; }
+  .about-hero-image   { grid-area: image;   padding-top: 6px; }
+
+  .about-portrait {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    box-shadow: 0 18px 50px rgba(10, 25, 47, .14);
+  }
+  .about-portrait-caption {
+    margin-top: 18px;
+    text-align: left;
+  }
+  .about-portrait-name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--navy);
+  }
+  .about-portrait-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--ink3);
+    margin-top: 2px;
+  }
+
+  @media (max-width: 900px) {
+    .about-hero {
+      padding-top: 112px;
+      padding-bottom: 56px;
+    }
+    .about-hero-inner {
+      padding: 0 24px;
+    }
+    .about-hero-grid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "heading"
+        "image"
+        "copy";
+      gap: 32px;
+    }
+    .about-hero-heading,
+    .about-hero-copy {
+      max-width: 100%;
+    }
+    .about-portrait {
+      max-width: 280px;
+      margin: 0 auto;
+    }
+    .about-portrait-caption {
+      text-align: center;
+    }
+  }
+
+  /* Section body wrapper - constrains line length for readability */
+  .about-prose {
+    max-width: 720px;
+  }
+  .about-prose p {
+    margin-bottom: 18px;
+  }
+  .about-prose p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Dark section transition styling */
+  .about-dark {
+    background: var(--navy);
+    color: #fff;
+    padding: 110px 0;
+  }
+  .about-dark-inner {
+    max-width: var(--max-s);
+    margin: 0 auto;
+    padding: 0 32px;
+    text-align: center;
+  }
+  .about-dark .eyebrow {
+    color: var(--lime);
+    margin-bottom: 24px;
+  }
+  .about-dark h2 {
+    color: #fff;
+    margin-bottom: 28px;
+  }
+  .about-dark-prose {
+    max-width: 640px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, .72);
+    font-size: 18px;
+    line-height: 1.75;
+  }
+  .about-dark-belief {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(204, 255, 0, .25);
+  }
+  .about-dark-belief-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: rgba(255, 255, 255, .55);
+    margin-bottom: 12px;
+  }
+  .about-dark-belief-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: clamp(22px, 3vw, 28px);
+    color: var(--lime);
+    line-height: 1.25;
+  }
+
+  @media (max-width: 900px) {
+    .about-dark {
+      padding: 72px 0;
+    }
+    .about-dark-inner {
+      padding: 0 24px;
+    }
+  }
+</style>
 </head>
 
 <body>
@@ -2855,92 +3009,97 @@
   </div>
 
     <!-- HERO -->
-    <section class="hero hero-wwm">
-      <div class="container">
-        <div class="hero-inner" style="text-align:center;max-width:780px;margin:0 auto;">
-          <div class="hero-label fade">About</div>
-          <h1 class="h-xl fade" style="margin-bottom:24px;">Why The Independent <span style="color:var(--lime);background:var(--navy);padding:2px 12px;border-radius:6px;">Edge</span> Exists</h1>
-          <p class="body-lg fade" style="color:var(--ink2);max-width:640px;margin:0 auto;">I spent nearly a decade building products inside growing technology companies. What I noticed had very little to do with technology.</p>
-        </div>
-      </div>
-    </section>
+    <section class="about-hero">
+      <div class="about-hero-inner">
+        <div class="about-hero-grid">
 
-    <!-- FOUNDER IMAGE + INTRO PROSE -->
-    <section class="section" style="padding-top:24px;">
-      <div class="container">
-        <div style="display:grid;grid-template-columns:1fr;gap:40px;max-width:880px;margin:0 auto;align-items:center;" class="fade">
-          <div style="text-align:center;">
-            <img src="/prannoy-kumar-founder.jpg"
+          <!-- Heading (left, row 1 on desktop / 1st on mobile) -->
+          <div class="about-hero-heading fade">
+            <span class="eyebrow">About</span>
+            <h1 class="h-xl" style="margin-bottom:0;">Why The Independent Edge Exists</h1>
+          </div>
+
+          <!-- Image (right, spans both rows on desktop / 2nd on mobile) -->
+          <div class="about-hero-image fade fade-delay-2">
+            <img class="about-portrait"
+              src="/prannoy-kumar-founder.jpg"
               alt="Prannoy Kumar, founder of The Independent Edge"
               width="320" height="480"
               loading="eager"
-              decoding="async"
-              style="width:100%;max-width:320px;height:auto;border-radius:12px;border:1px solid var(--bg3);display:block;margin:0 auto;" />
-            <div style="margin-top:14px;font-family:'Manrope',sans-serif;font-size:14px;font-weight:700;color:var(--navy);">Prannoy Kumar</div>
-            <div style="font-size:12px;color:var(--ink3);">Founder, The Independent Edge</div>
+              decoding="async" />
+            <div class="about-portrait-caption">
+              <div class="about-portrait-name">Prannoy Kumar</div>
+              <div class="about-portrait-role">Founder, The Independent Edge</div>
+            </div>
           </div>
-          <div style="font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;color:var(--ink2);">
-            <p style="margin-bottom:14px;">The professionals who moved fastest were rarely the smartest people in the room. They were the people who could think clearly when the stakes became real.</p>
-            <p style="margin-bottom:14px;">When a client pushed back. When money entered the conversation. When a decision had to be made.</p>
-            <p style="margin-bottom:0;">Most professionals never practise that skill deliberately. The Independent Edge was built to change that.</p>
+
+          <!-- Copy (left, row 2 on desktop / 3rd on mobile) -->
+          <div class="about-hero-copy fade fade-delay-1">
+            <p class="body-lg" style="margin-bottom:18px;">I spent nearly a decade building products inside growing technology companies. What I noticed had very little to do with technology.</p>
+            <p class="body-lg" style="margin-bottom:18px;">The professionals who moved fastest were rarely the smartest people in the room. They were the people who could think clearly when the stakes became real.</p>
+            <p class="body-lg" style="margin-bottom:18px;">When a client pushed back. When money entered the conversation. When a decision had to be made.</p>
+            <p class="body-lg" style="margin-bottom:0;">Most professionals never practise that skill deliberately. The Independent Edge was built to change that.</p>
           </div>
+
         </div>
       </div>
     </section>
 
     <!-- THE PATH HERE -->
+    <section class="section">
+      <div class="path-inner">
+        <div class="fade" style="margin-bottom:32px;">
+          <span class="eyebrow">The Path Here</span>
+          <h2 class="h-md" style="max-width:760px;">Knowledge was rarely the bottleneck. Communication under pressure was.</h2>
+        </div>
+        <div class="about-prose fade">
+          <p class="body-lg">My background spans product management, enterprise software, customer conversations, and high ticket sales. Across those experiences, one pattern appeared repeatedly.</p>
+          <p class="body-lg">Over the last several years, I have worked across product, technology, and revenue environments while influencing more than &#8377;3 Cr through sales conversations.</p>
+          <p class="body-lg">The same gap appeared everywhere. People knew more than they could communicate. They understood more than they could articulate. And when the stakes increased, their thinking became less clear.</p>
+          <p class="body-lg">That gap is what this work is built around.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY SALES (alternating bg2) -->
     <section class="section" style="background:var(--bg2);">
-      <div class="container">
-        <div class="section-label fade">The Path Here</div>
-        <h2 class="h-md fade" style="max-width:700px;margin-bottom:24px;">Knowledge was rarely the bottleneck. Communication under pressure was.</h2>
-        <div style="max-width:720px;font-family:'Inter',sans-serif;font-size:16px;line-height:1.75;color:var(--ink2);">
-          <p style="margin-bottom:16px;" class="fade">My background spans product management, enterprise software, customer conversations, and high ticket sales. Across those experiences, one pattern appeared repeatedly.</p>
-          <p style="margin-bottom:16px;" class="fade">Over the last several years, I have worked across product, technology, and revenue environments while influencing more than &#8377;3 Cr through sales conversations.</p>
-          <p style="margin-bottom:16px;" class="fade">The same gap appeared everywhere. People knew more than they could communicate. They understood more than they could articulate. And when the stakes increased, their thinking became less clear.</p>
-          <p style="margin-bottom:0;" class="fade">That gap is what this work is built around.</p>
+      <div class="path-inner">
+        <div class="fade" style="margin-bottom:32px;">
+          <span class="eyebrow">Why Sales</span>
+          <h2 class="h-md" style="max-width:760px;">Sales is where communication becomes measurable.</h2>
+        </div>
+        <div class="about-prose fade">
+          <p class="body-lg">Most people think sales is a profession. I think of it differently.</p>
+          <p class="body-lg">You either create movement or you do not. You either help someone make a decision or you do not. That makes it one of the fastest ways to expose weaknesses in thinking, confidence, and communication.</p>
+          <p class="body-lg">The lessons from sales extend far beyond selling. They influence leadership, negotiations, career growth, decision making, and the ability to create opportunities.</p>
         </div>
       </div>
     </section>
 
-    <!-- WHY SALES -->
-    <section class="section">
-      <div class="container">
-        <div class="section-label fade">Why Sales</div>
-        <h2 class="h-md fade" style="max-width:760px;margin-bottom:24px;">Sales is where communication becomes measurable.</h2>
-        <div style="max-width:720px;font-family:'Inter',sans-serif;font-size:16px;line-height:1.75;color:var(--ink2);">
-          <p style="margin-bottom:16px;" class="fade">Most people think sales is a profession. I think of it differently.</p>
-          <p style="margin-bottom:16px;" class="fade">You either create movement or you do not. You either help someone make a decision or you do not. That makes it one of the fastest ways to expose weaknesses in thinking, confidence, and communication.</p>
-          <p style="margin-bottom:0;" class="fade">The lessons from sales extend far beyond selling. They influence leadership, negotiations, career growth, decision making, and the ability to create opportunities.</p>
+    <!-- WHAT THE INDEPENDENT EDGE IS (dark section) -->
+    <section class="about-dark">
+      <div class="about-dark-inner">
+        <span class="eyebrow fade">What The Independent Edge Is</span>
+        <h2 class="h-md fade">Not a motivation brand. Not a business opportunity. Not a promise of easy income.</h2>
+        <div class="about-dark-prose fade">
+          <p>It exists for professionals who want more control over income, decisions, opportunities, and important conversations.</p>
+        </div>
+        <div class="about-dark-belief fade">
+          <div class="about-dark-belief-label">Everything here is built around one belief</div>
+          <div class="about-dark-belief-text">Knowledge is common. Composure is rare.</div>
         </div>
       </div>
     </section>
 
-    <!-- WHAT THIS IS -->
-    <section class="section" style="background:var(--navy);color:#fff;">
-      <div class="container">
-        <div class="section-label fade" style="color:var(--lime);">What The Independent Edge Is</div>
-        <h2 class="h-md fade" style="color:#fff;max-width:760px;margin-bottom:24px;">Not a motivation brand. Not a business opportunity. Not a promise of easy income.</h2>
-        <div style="max-width:720px;font-family:'Inter',sans-serif;font-size:16px;line-height:1.75;color:rgba(255,255,255,.78);">
-          <p style="margin-bottom:24px;" class="fade">It exists for professionals who want more control over income, decisions, opportunities, and important conversations.</p>
-          <p style="margin-bottom:8px;font-family:'Manrope',sans-serif;font-weight:700;font-size:18px;color:#fff;" class="fade">Everything here is built around one belief.</p>
-          <p style="font-family:'Manrope',sans-serif;font-weight:800;font-size:24px;color:var(--lime);margin-bottom:0;" class="fade">Knowledge is common. Composure is rare.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section">
-      <div class="container" style="text-align:center;">
-        <h2 class="h-md fade" style="max-width:640px;margin:0 auto 24px;">Two ways to begin. One direction.</h2>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" class="fade">
+    <!-- FINAL CTA (matches homepage final-cta) -->
+    <section class="final-cta">
+      <div class="final-cta-inner fade">
+        <h2 class="final-cta-title">If this resonates,<br /><em>start where it makes sense.</em></h2>
+        <p class="final-cta-sub">Two ways to begin. One direction.</p>
+        <div class="final-cta-btns">
           <a class="btn btn-primary btn-lg" href="/apply">Apply for Coaching</a>
-          <a class="btn btn-outline btn-lg" href="/the-weekly-edge">Read The Weekly Edge</a>
+          <a class="btn btn-outline-white btn-lg" href="/the-weekly-edge">Read The Weekly Edge</a>
         </div>
-        <p style="font-size:13px;color:var(--ink3);margin-top:20px;" class="fade">
-          Or explore the
-          <a href="/work-with-me" style="color:var(--navy);text-decoration:underline;">Work With Me</a>
-          page to understand how the coaching works.
-        </p>
       </div>
     </section>
 
