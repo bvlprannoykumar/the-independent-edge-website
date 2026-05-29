@@ -4,7 +4,7 @@
 [build]
   publish = "."
 
-# Pretty URLs: serve work-with-me.html at /work-with-me, etc.
+# Pretty URLs: serve <slug>.html at /<slug>
 [[redirects]]
   from = "/work-with-me"
   to = "/work-with-me.html"
@@ -20,7 +20,22 @@
   to = "/apply.html"
   status = 200
 
-# Force HTTPS and strip trailing slashes (optional, Netlify handles HTTPS by default)
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+# Trailing slash -> canonical (no slash)
 [[redirects]]
   from = "/work-with-me/"
   to = "/work-with-me"
@@ -36,7 +51,22 @@
   to = "/apply"
   status = 301
 
-# Redirect .html URLs to clean URLs (avoid duplicate content)
+[[redirects]]
+  from = "/about/"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/privacy/"
+  to = "/privacy"
+  status = 301
+
+[[redirects]]
+  from = "/terms/"
+  to = "/terms"
+  status = 301
+
+# .html -> clean URL (avoid duplicate content)
 [[redirects]]
   from = "/work-with-me.html"
   to = "/work-with-me"
@@ -53,6 +83,21 @@
   status = 301
 
 [[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+
+[[redirects]]
+  from = "/terms.html"
+  to = "/terms"
+  status = 301
+
+[[redirects]]
   from = "/index.html"
   to = "/"
   status = 301
@@ -64,3 +109,14 @@
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache the founder image aggressively (it does not change)
+[[headers]]
+  for = "/prannoy-kumar-founder.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/og-default.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
