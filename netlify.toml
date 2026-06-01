@@ -4,7 +4,7 @@
 [build]
   publish = "."
 
-# Pretty URLs: serve <slug>.html at /<slug>
+# Clean URL rewrites (200 = serve file at clean URL, no redirect)
 [[redirects]]
   from = "/work-with-me"
   to = "/work-with-me.html"
@@ -35,7 +35,29 @@
   to = "/terms.html"
   status = 200
 
-# Trailing slash -> canonical (no slash)
+[[redirects]]
+  from = "/insights"
+  to = "/insights.html"
+  status = 200
+
+# Insights articles (subfolder, Netlify serves /insights/<slug>.html at /insights/<slug>)
+# These explicit rewrites are belt-and-suspenders to guarantee the clean URL works
+[[redirects]]
+  from = "/insights/revenue-oxygen"
+  to = "/insights/revenue-oxygen.html"
+  status = 200
+
+[[redirects]]
+  from = "/insights/the-silence-at-the-mandap"
+  to = "/insights/the-silence-at-the-mandap.html"
+  status = 200
+
+[[redirects]]
+  from = "/insights/family-whatsapp-committee"
+  to = "/insights/family-whatsapp-committee.html"
+  status = 200
+
+# Trailing slash -> canonical
 [[redirects]]
   from = "/work-with-me/"
   to = "/work-with-me"
@@ -66,7 +88,27 @@
   to = "/terms"
   status = 301
 
-# .html -> clean URL (avoid duplicate content)
+[[redirects]]
+  from = "/insights/"
+  to = "/insights"
+  status = 301
+
+[[redirects]]
+  from = "/insights/revenue-oxygen/"
+  to = "/insights/revenue-oxygen"
+  status = 301
+
+[[redirects]]
+  from = "/insights/the-silence-at-the-mandap/"
+  to = "/insights/the-silence-at-the-mandap"
+  status = 301
+
+[[redirects]]
+  from = "/insights/family-whatsapp-committee/"
+  to = "/insights/family-whatsapp-committee"
+  status = 301
+
+# .html -> clean URL
 [[redirects]]
   from = "/work-with-me.html"
   to = "/work-with-me"
@@ -98,6 +140,26 @@
   status = 301
 
 [[redirects]]
+  from = "/insights.html"
+  to = "/insights"
+  status = 301
+
+[[redirects]]
+  from = "/insights/revenue-oxygen.html"
+  to = "/insights/revenue-oxygen"
+  status = 301
+
+[[redirects]]
+  from = "/insights/the-silence-at-the-mandap.html"
+  to = "/insights/the-silence-at-the-mandap"
+  status = 301
+
+[[redirects]]
+  from = "/insights/family-whatsapp-committee.html"
+  to = "/insights/family-whatsapp-committee"
+  status = 301
+
+[[redirects]]
   from = "/index.html"
   to = "/"
   status = 301
@@ -110,7 +172,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Cache the founder image aggressively (it does not change)
+# Aggressive cache for static images
 [[headers]]
   for = "/prannoy-kumar-founder.jpg"
   [headers.values]
@@ -118,5 +180,10 @@
 
 [[headers]]
   for = "/og-default.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/insights/*.jpg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"

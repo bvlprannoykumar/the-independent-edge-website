@@ -5,17 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Primary Meta Tags -->
   <title>Privacy Policy | The Independent Edge</title>
   <meta name="title" content="Privacy Policy | The Independent Edge" />
   <meta name="description" content="How The Independent Edge collects, uses, stores, and protects your personal information when you apply, subscribe, or use this website." />
   <meta name="robots" content="index, follow" />
-  <meta name="author" content="The Independent Edge" />
+  <meta name="author" content="Prannoy Kumar" />
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://theindependentedge.in/privacy" />
 
-  <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://theindependentedge.in/privacy" />
   <meta property="og:title" content="Privacy Policy | The Independent Edge" />
@@ -26,14 +23,18 @@
   <meta property="og:site_name" content="The Independent Edge" />
   <meta property="og:locale" content="en_IN" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://theindependentedge.in/privacy" />
   <meta name="twitter:title" content="Privacy Policy | The Independent Edge" />
   <meta name="twitter:description" content="How The Independent Edge collects, uses, stores, and protects your personal information when you apply, subscribe, or use this website." />
   <meta name="twitter:image" content="https://theindependentedge.in/og-default.jpg" />
 
-  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
   <!-- Structured Data: WebPage -->
   <script type="application/ld+json">
@@ -2175,8 +2176,8 @@
 
     .footer-top {
       display: grid;
-      grid-template-columns: 1.4fr 0.8fr 0.8fr;
-      gap: 72px;
+      grid-template-columns: 1.2fr 0.8fr 0.5fr 0.7fr;
+      gap: 48px;
       align-items: start;
       margin-bottom: 56px;
     }
@@ -2196,7 +2197,7 @@
     }
 
     .footer-tagline {
-      max-width: 320px;
+      max-width: 280px;
       font-size: 13px;
       color: rgba(255, 255, 255, .4);
       line-height: 1.7;
@@ -2306,8 +2307,12 @@
       }
 
       .footer-top {
-        grid-template-columns: 1fr;
-        gap: 32px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        row-gap: 32px;
+      }
+      .footer-top > div:first-child {
+        grid-column: 1 / -1;
       }
 
       .reality-inner,
@@ -2381,9 +2386,7 @@
         grid-template-columns: 1fr;
       }
 
-      .footer-top {
-        grid-template-columns: 1fr 1fr;
-      }
+
 
       .nav-links {
         display: none;
@@ -2416,6 +2419,9 @@
 
       .footer-top {
         grid-template-columns: 1fr;
+      }
+      .footer-top > div:first-child {
+        grid-column: auto;
       }
 
       .final-cta-btns {
@@ -2778,6 +2784,103 @@
       }
     }
   </style>
+
+  <style>
+  /* LEGAL PAGES - shared layout */
+  .legal-page { background: var(--bg); }
+
+  .legal-hero {
+    padding-top: 140px;
+    padding-bottom: 48px;
+  }
+  .legal-wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .legal-hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .legal-eyebrow {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--ink3);
+    margin-bottom: 24px;
+    display: block;
+  }
+  .legal-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.2px;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+  .legal-deck {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(18px, 2vw, 21px);
+    line-height: 1.55;
+    color: var(--ink2);
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  .legal-updated {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink3);
+    letter-spacing: .02em;
+  }
+
+  .legal-body-wrap {
+    padding: 56px 32px 96px;
+  }
+  .legal-body {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.78;
+    color: var(--ink2);
+  }
+  .legal-body h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 48px;
+    margin-bottom: 16px;
+    line-height: 1.3;
+    letter-spacing: -.2px;
+  }
+  .legal-body h2:first-child { margin-top: 0; }
+  .legal-body p { margin-bottom: 20px; }
+  .legal-body strong { color: var(--navy); font-weight: 600; }
+  .legal-body a {
+    color: var(--navy);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .legal-body ul, .legal-body ol {
+    margin-bottom: 24px;
+    padding-left: 22px;
+  }
+  .legal-body li { margin-bottom: 10px; }
+
+  @media (max-width: 768px) {
+    .legal-hero { padding-top: 112px; padding-bottom: 36px; }
+    .legal-wrap { padding: 0 24px; }
+    .legal-body-wrap { padding: 40px 24px 72px; }
+    .legal-body { font-size: 16px; line-height: 1.75; }
+    .legal-body h2 { margin-top: 36px; font-size: 20px; }
+    .legal-body p { margin-bottom: 16px; }
+  }
+</style>
 </head>
 
 <body>
@@ -2813,81 +2916,86 @@
       href="/apply">Apply for Coaching</a>
   </div>
 
-    <!-- HERO -->
-    <section class="hero hero-edge">
-      <div class="container">
-        <div class="hero-inner" style="max-width:780px;">
-          <div class="hero-label fade">Legal</div>
-          <h1 class="h-xl fade" style="margin-bottom:16px;">Privacy Policy</h1>
-          <p class="body-md fade" style="color:var(--ink2);">Last updated: 29 May 2026. This policy explains what we collect, why, and what you can do about it.</p>
-        </div>
-      </div>
-    </section>
+    <div class="legal-page">
 
-    <!-- POLICY BODY -->
-    <section class="section">
-      <div class="container">
+      <section class="legal-hero">
+        <div class="legal-wrap">
+          <div class="legal-hero-inner">
+            <span class="legal-eyebrow fade">Legal</span>
+            <h1 class="legal-title fade">Privacy Policy</h1>
+            <p class="legal-deck fade">How The Independent Edge handles information shared through this website.</p>
+            <div class="legal-updated fade">Last updated: 29 May 2026</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="legal-body-wrap">
+        <div class="legal-wrap">
+          <div class="legal-body fade">
         <div style="max-width:760px;font-family:'Inter',sans-serif;font-size:16px;line-height:1.75;color:var(--ink2);">
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;margin-top:0;">1. Who we are</h2>
-          <p style="margin-bottom:24px;" class="fade">The Independent Edge ("we", "us", "our") operates the website at theindependentedge.in. The site is owned and operated by Prannoy Kumar, India. For any privacy related question, write to <a href="mailto:hello@theindependentedge.in" style="color:var(--navy);text-decoration:underline;">hello@theindependentedge.in</a>.</p>
+          <h2>1. Who we are</h2>
+          <p>The Independent Edge ("we", "us", "our") operates the website at theindependentedge.in. The site is owned and operated by Prannoy Kumar, India. Questions regarding privacy may be directed through the contact methods available on this website.</p>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">2. Information we collect</h2>
-          <p style="margin-bottom:12px;" class="fade">We collect information only when you actively provide it or when it is automatically logged for technical reasons.</p>
-          <p style="margin-bottom:8px;" class="fade"><strong style="color:var(--navy);">Information you provide.</strong> When you complete the application form on the Apply page, you provide your name, email address, phone number, and the answers you select. When you subscribe to The Weekly Edge newsletter, you provide your email address on Substack, which is governed by Substack&#39;s own privacy policy.</p>
-          <p style="margin-bottom:8px;" class="fade"><strong style="color:var(--navy);">Information we collect automatically.</strong> Standard server logs may record your IP address, browser type, referring page, and the pages you visit on the site. This is used for security and aggregate usage analysis only.</p>
-          <p style="margin-bottom:24px;" class="fade"><strong style="color:var(--navy);">Cookies and analytics.</strong> The site currently does not run third party analytics or advertising trackers. If we add analytics in future (for example Google Analytics, Plausible, or similar), we will update this policy and where required ask for your consent before non essential cookies are set.</p>
+          <h2>2. Information we collect</h2>
+          <p>We collect information only when you actively provide it or when it is automatically logged for technical reasons.</p>
+          <p><strong style="color:var(--navy);">Information you provide.</strong> When you complete the application form on the Apply page, you provide your name, email address, phone number, and the answers you select. When you subscribe to The Weekly Edge newsletter, you provide your email address on a third party newsletter platform, which is governed by that platform&#39;s own privacy policy.</p>
+          <p><strong style="color:var(--navy);">Information we collect automatically.</strong> Standard server logs may record your IP address, browser type, referring page, and the pages you visit on the site. This is used for security and aggregate usage analysis only.</p>
+          <p><strong style="color:var(--navy);">Cookies and analytics.</strong> The site currently does not run third party analytics or advertising trackers. If analytics or additional tracking technologies are introduced in the future, this policy will be updated accordingly.</p>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">3. How we use your information</h2>
-          <p style="margin-bottom:12px;" class="fade">Information you provide is used to:</p>
-          <ul style="margin-bottom:24px;padding-left:24px;" class="fade">
-            <li style="margin-bottom:8px;">Review your coaching application and decide whether the program is a fit for you.</li>
-            <li style="margin-bottom:8px;">Contact you about your application via email or phone.</li>
-            <li style="margin-bottom:8px;">Send transactional or service related messages connected to a coaching engagement, if one begins.</li>
-            <li style="margin-bottom:8px;">Maintain our own records and improve the program over time.</li>
+          <h2>3. How we use your information</h2>
+          <p>Information you provide is used to:</p>
+          <ul>
+            <li>Review your coaching application and decide whether the program is a fit for you.</li>
+            <li>Contact you about your application via email or phone.</li>
+            <li>Send transactional or service related messages connected to a coaching engagement, if one begins.</li>
+            <li>Maintain our own records and improve the program over time.</li>
           </ul>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">4. Where your information is stored</h2>
-          <p style="margin-bottom:24px;" class="fade">Application form submissions are stored in Google Sheets, hosted by Google Cloud. Newsletter subscriptions are stored on Substack. Both are international service providers and may store data outside India. By using the site, you understand and agree to this. Substack and Google publish their own privacy commitments which apply to the data they hold.</p>
+          <h2>4. Where your information is stored</h2>
+          <p>Information may be stored and processed using reputable third party service providers that help operate the website, scheduling systems, communication channels, and content delivery platforms. Some of these providers may store data outside India. By using the site, you understand and agree to this. Each provider publishes its own privacy commitments which apply to the data they hold.</p>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">5. Who we share your information with</h2>
-          <p style="margin-bottom:12px;" class="fade">We do not sell your personal information. We share it only:</p>
-          <ul style="margin-bottom:24px;padding-left:24px;" class="fade">
-            <li style="margin-bottom:8px;">With the service providers we use to operate the site (Netlify for hosting, Google for storing application data, Substack for the newsletter, Cal for scheduling calls).</li>
-            <li style="margin-bottom:8px;">When required by law, valid legal process, or to protect rights, property, or safety.</li>
+          <h2>5. Who we share your information with</h2>
+          <p>We do not sell your personal information. We share it only:</p>
+          <ul>
+            <li>With reputable third party service providers we use to operate the site, including hosting, storage, scheduling, and communication platforms.</li>
+            <li>When required by law, valid legal process, or to protect rights, property, or safety.</li>
           </ul>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">6. How long we keep your information</h2>
-          <p style="margin-bottom:24px;" class="fade">Application submissions are retained while they remain useful for evaluating fit and following up. Newsletter subscriber data remains for as long as you stay subscribed. You can request deletion at any time using the contact email below.</p>
+          <h2>6. How long we keep your information</h2>
+          <p>Application submissions are retained while they remain useful for evaluating fit and following up. Newsletter subscriber data remains for as long as you stay subscribed. You can request deletion at any time through the contact methods available on this website.</p>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">7. Your rights</h2>
-          <p style="margin-bottom:12px;" class="fade">You can ask us to:</p>
-          <ul style="margin-bottom:24px;padding-left:24px;" class="fade">
-            <li style="margin-bottom:8px;">Confirm what personal information we hold about you.</li>
-            <li style="margin-bottom:8px;">Correct any information that is wrong or out of date.</li>
-            <li style="margin-bottom:8px;">Delete your personal information, subject to legal retention requirements.</li>
-            <li style="margin-bottom:8px;">Unsubscribe from the newsletter using the link at the bottom of any email.</li>
+          <h2>7. Your rights</h2>
+          <p>You can ask us to:</p>
+          <ul>
+            <li>Confirm what personal information we hold about you.</li>
+            <li>Correct any information that is wrong or out of date.</li>
+            <li>Delete your personal information, subject to legal retention requirements.</li>
+            <li>Unsubscribe from the newsletter using the link at the bottom of any email.</li>
           </ul>
-          <p style="margin-bottom:24px;" class="fade">To exercise any of these rights, email <a href="mailto:hello@theindependentedge.in" style="color:var(--navy);text-decoration:underline;">hello@theindependentedge.in</a>. We aim to respond within thirty days.</p>
+          <p>To exercise any of these rights, please reach out through the contact methods available on this website. We will make reasonable efforts to respond to such requests.</p>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">8. Data protection</h2>
-          <p style="margin-bottom:24px;" class="fade">We take reasonable steps to protect the information you share with us, including hosting the site over HTTPS, restricting access to application data, and using reputable service providers. No method of transmission over the internet is fully secure, so we cannot guarantee absolute security.</p>
+          <h2>8. Data protection</h2>
+          <p>We take reasonable steps to protect the information you share with us, including hosting the site over HTTPS, restricting access to application data, and using reputable service providers. No method of transmission over the internet is fully secure, so we cannot guarantee absolute security.</p>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">9. Third party links</h2>
-          <p style="margin-bottom:24px;" class="fade">The site links to third party platforms including Substack, Cal, LinkedIn, and X. Their privacy practices are governed by their own policies. We are not responsible for content or practices on those platforms.</p>
+          <h2>9. Third party links</h2>
+          <p>The site links to third party platforms. Their privacy practices are governed by their own policies. We are not responsible for content or practices on those platforms.</p>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">10. Children</h2>
-          <p style="margin-bottom:24px;" class="fade">The site is intended for working professionals aged 18 and above. We do not knowingly collect personal information from children. If you believe a minor has shared information with us, contact us and we will delete it.</p>
+          <h2>10. Children</h2>
+          <p>The site is intended for working professionals aged 18 and above. We do not knowingly collect personal information from children. If you believe a minor has shared information with us, contact us and we will delete it.</p>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">11. Changes to this policy</h2>
-          <p style="margin-bottom:24px;" class="fade">We may update this policy from time to time. The "Last updated" date at the top reflects the most recent revision. Continued use of the site after changes are posted means you accept the revised policy.</p>
+          <h2>11. Changes to this policy</h2>
+          <p>We may update this policy from time to time. The "Last updated" date at the top reflects the most recent revision. Continued use of the site after changes are posted means you accept the revised policy.</p>
 
-          <h2 class="h-md fade" style="font-size:22px;margin-bottom:12px;">12. Contact</h2>
-          <p style="margin-bottom:0;" class="fade">Privacy questions, requests, or complaints: <a href="mailto:hello@theindependentedge.in" style="color:var(--navy);text-decoration:underline;">hello@theindependentedge.in</a>.</p>
+          <h2>12. Contact</h2>
+          <p>Questions regarding privacy may be directed through the contact methods available on this website.</p>
 
+        
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+    </div>
 
   <footer class="footer">
     <div class="footer-inner">
@@ -2901,18 +3009,19 @@
           <div class="footer-col-label">Content</div>
           <a class="footer-link" href="/the-weekly-edge">The Weekly Edge</a>
           <a class="footer-link" href="/work-with-me">Work With Me</a>
+          <a class="footer-link" href="/insights">Insights</a>
           <a class="footer-link" href="/apply">Apply</a>
           <a class="footer-link" href="/about">About</a>
-        </div>
-        <div>
-          <div class="footer-col-label">Legal</div>
-          <a class="footer-link" href="/privacy">Privacy Policy</a>
-          <a class="footer-link" href="/terms">Terms &amp; Conditions</a>
         </div>
         <div>
           <div class="footer-col-label">Connect</div>
           <a class="footer-link" href="https://www.linkedin.com/in/prannoykumar/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="footer-link" href="https://x.com/maverickprannoy" target="_blank" rel="noopener">X (Twitter)</a>
+        </div>
+        <div>
+          <div class="footer-col-label">Legal</div>
+          <a class="footer-link" href="/privacy">Privacy Policy</a>
+          <a class="footer-link" href="/terms">Terms &amp; Conditions</a>
         </div>
       </div>
       <div class="footer-bottom">

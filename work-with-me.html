@@ -2160,8 +2160,8 @@
 
     .footer-top {
       display: grid;
-      grid-template-columns: 1.4fr 0.8fr 0.8fr;
-      gap: 72px;
+      grid-template-columns: 1.2fr 0.8fr 0.5fr 0.7fr;
+      gap: 48px;
       align-items: start;
       margin-bottom: 56px;
     }
@@ -2181,7 +2181,7 @@
     }
 
     .footer-tagline {
-      max-width: 320px;
+      max-width: 280px;
       font-size: 13px;
       color: rgba(255, 255, 255, .4);
       line-height: 1.7;
@@ -2291,8 +2291,12 @@
       }
 
       .footer-top {
-        grid-template-columns: 1fr;
-        gap: 32px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        row-gap: 32px;
+      }
+      .footer-top > div:first-child {
+        grid-column: 1 / -1;
       }
 
       .reality-inner,
@@ -2366,9 +2370,7 @@
         grid-template-columns: 1fr;
       }
 
-      .footer-top {
-        grid-template-columns: 1fr 1fr;
-      }
+
 
       .nav-links {
         display: none;
@@ -2401,6 +2403,9 @@
 
       .footer-top {
         grid-template-columns: 1fr;
+      }
+      .footer-top > div:first-child {
+        grid-column: auto;
       }
 
       .final-cta-btns {
@@ -3027,18 +3032,19 @@
           <div class="footer-col-label">Content</div>
           <a class="footer-link" href="/the-weekly-edge">The Weekly Edge</a>
           <a class="footer-link" href="/work-with-me">Work With Me</a>
+          <a class="footer-link" href="/insights">Insights</a>
           <a class="footer-link" href="/apply">Apply</a>
           <a class="footer-link" href="/about">About</a>
-        </div>
-        <div>
-          <div class="footer-col-label">Legal</div>
-          <a class="footer-link" href="/privacy">Privacy Policy</a>
-          <a class="footer-link" href="/terms">Terms &amp; Conditions</a>
         </div>
         <div>
           <div class="footer-col-label">Connect</div>
           <a class="footer-link" href="https://www.linkedin.com/in/prannoykumar/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="footer-link" href="https://x.com/maverickprannoy" target="_blank" rel="noopener">X (Twitter)</a>
+        </div>
+        <div>
+          <div class="footer-col-label">Legal</div>
+          <a class="footer-link" href="/privacy">Privacy Policy</a>
+          <a class="footer-link" href="/terms">Terms &amp; Conditions</a>
         </div>
       </div>
       <div class="footer-bottom">

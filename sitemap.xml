@@ -31,6 +31,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://theindependentedge.in/insights</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://theindependentedge.in/insights/revenue-oxygen</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://theindependentedge.in/insights/the-silence-at-the-mandap</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://theindependentedge.in/insights/family-whatsapp-committee</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://theindependentedge.in/privacy</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>yearly</changefreq>
