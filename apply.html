@@ -2768,6 +2768,90 @@
       }
     }
   </style>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4JEYDJ451"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B4JEYDJ451');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x0uwt3ip1n");
+  </script>
+
+  <!-- Tracking Helper + Source Capture -->
+  <script>
+    // Safe event tracker - never blocks user actions
+    function trackEvent(eventName, params) {
+      params = params || {};
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params);
+        }
+      } catch (e) {
+        console.warn('GA tracking failed', e);
+      }
+    }
+
+    // Source data capture
+    (function() {
+      try {
+        // Landing page (first page in session)
+        if (!sessionStorage.getItem('tie_lp')) {
+          sessionStorage.setItem('tie_lp', window.location.pathname);
+        }
+        // Referrer (capture once per session)
+        if (!sessionStorage.getItem('tie_ref')) {
+          sessionStorage.setItem('tie_ref', document.referrer || '');
+        }
+        // UTM parameters (capture if present, persist for session)
+        var params = new URLSearchParams(window.location.search);
+        var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+        utmKeys.forEach(function(k) {
+          var v = params.get(k);
+          if (v) sessionStorage.setItem('tie_' + k, v);
+        });
+      } catch (e) {}
+    })();
+
+    function getDeviceType() {
+      var w = window.innerWidth;
+      if (w < 768) return 'mobile';
+      if (w < 1024) return 'tablet';
+      return 'desktop';
+    }
+
+    function getSourceData() {
+      try {
+        return {
+          landingPage: sessionStorage.getItem('tie_lp') || window.location.pathname,
+          currentPage: window.location.pathname,
+          referrer: sessionStorage.getItem('tie_ref') || document.referrer || '',
+          utmSource: sessionStorage.getItem('tie_utm_source') || '',
+          utmMedium: sessionStorage.getItem('tie_utm_medium') || '',
+          utmCampaign: sessionStorage.getItem('tie_utm_campaign') || '',
+          utmContent: sessionStorage.getItem('tie_utm_content') || '',
+          utmTerm: sessionStorage.getItem('tie_utm_term') || '',
+          deviceType: getDeviceType()
+        };
+      } catch (e) {
+        return {
+          landingPage: '', currentPage: window.location.pathname, referrer: '',
+          utmSource: '', utmMedium: '', utmCampaign: '', utmContent: '', utmTerm: '',
+          deviceType: getDeviceType()
+        };
+      }
+    }
+  </script>
+
 </head>
 
 <body>
@@ -2778,6 +2862,7 @@
         <a class="nav-link" id="nl-home" href="/">Home</a>
         <a class="nav-link" id="nl-wwm" href="/work-with-me">Work With Me</a>
         <a class="nav-link" id="nl-edge" href="/the-weekly-edge">The Weekly Edge</a>
+        <a class="nav-link" id="nl-insights" href="/insights">Insights</a>
         <a class="nav-link" id="nl-about" href="/about">About</a>
         <a class="nav-cta" href="/apply">Apply</a>
       </div>
@@ -2797,11 +2882,13 @@
     <a class="mobile-nav-link" href="/">Home</a>
     <a class="mobile-nav-link" href="/work-with-me">Work With Me</a>
     <a class="mobile-nav-link" href="/the-weekly-edge">The Weekly Edge</a>
+    <a class="mobile-nav-link" href="/insights">Insights</a>
     <a class="mobile-nav-link" href="/about">About</a>
     <a class="mobile-nav-link"
       style="color:var(--lime);background:var(--navy);padding:16px;border-radius:8px;border:none;margin-top:12px;text-align:center;"
       href="/apply">Apply for Coaching</a>
   </div>
+
 
 
   <div class="page active" id="page-apply">
@@ -3157,7 +3244,7 @@
             <div class="q-text">In 2–3 sentences, what specifically made you look this up today?</div>
             <div class="q-sub">This is the most important question. A thoughtful answer matters more here than a
               polished one.</div>
-            <textarea class="apply-textarea" id="q5-text" rows="5" maxlength="500"
+            <textarea class="apply-textarea" id="q5-text" data-clarity-mask="true" rows="5" maxlength="500"
               placeholder="What happened recently, or what have you been sitting with, that brought you here?"
               oninput="applyTextUpdate()"></textarea>
             <div class="char-count"><span id="q5-count">0</span> / 500 <span id="q5-hint" style="margin-left:6px;font-weight:600;"></span></div>
@@ -3183,7 +3270,7 @@
                 <label
                   style="font-family:'Manrope',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);display:block;margin-bottom:7px;">Full
                   Name</label>
-                <input type="text" id="capture-name" class="apply-textarea"
+                <input type="text" id="capture-name" data-clarity-mask="true" class="apply-textarea"
                   style="resize:none;padding:12px 14px;font-size:15px;" placeholder="Your name"
                   oninput="applyCaptureCheck()" />
               </div>
@@ -3191,7 +3278,7 @@
                 <label
                   style="font-family:'Manrope',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);display:block;margin-bottom:7px;">Email
                   Address</label>
-                <input type="email" id="capture-email" class="apply-textarea"
+                <input type="email" id="capture-email" data-clarity-mask="true" class="apply-textarea"
                   style="resize:none;padding:12px 14px;font-size:15px;" placeholder="your@email.com"
                   oninput="applyCaptureCheck()" />
               </div>
@@ -3199,7 +3286,7 @@
                 <label
                   style="font-family:'Manrope',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);display:block;margin-bottom:7px;">Phone
                   Number</label>
-                <input type="tel" id="capture-phone" class="apply-textarea"
+                <input type="tel" id="capture-phone" data-clarity-mask="true" class="apply-textarea"
                   style="resize:none;padding:12px 14px;font-size:15px;" placeholder="+91 98765 43210"
                   oninput="applyCaptureCheck()" />
                 <div style="font-size:11px;color:var(--ink3);margin-top:6px;">We may reach out directly if your
@@ -3238,7 +3325,7 @@
                 </svg>
                 Book Founder Call
               </a>
-              <p style="font-size:12px;color:var(--ink3);margin-top:12px;">Opens in a new tab.</p>
+              <p style="font-size:12px;color:var(--ink3);margin-top:12px;line-height:1.5;">After booking, check your email for the calendar confirmation.</p>
             </div>
           </div>
         </div>
@@ -3297,6 +3384,7 @@
               </a>
               <a class="btn btn-outline btn-lg" href="/the-weekly-edge">Start with Newsletter</a>
             </div>
+            <p style="font-size:12px;color:var(--ink3);margin-top:12px;line-height:1.5;text-align:center;">After booking, check your email for the calendar confirmation.</p>
           </div>
         </div>
 
@@ -3548,12 +3636,25 @@
       applyChoices[qKey] = idx;
       var nextBtn = document.getElementById(qKey + '-next');
       if (nextBtn) nextBtn.disabled = false;
+      // Analytics: track question answer
+      if (!window._tieQTrack) window._tieQTrack = {};
+      if (!window._tieQTrack[qKey]) {
+        window._tieQTrack[qKey] = true;
+        var qNum = qKey.replace('q', '');
+        trackEvent('question_' + qNum + '_answered', {question: qKey});
+        if (qKey === 'q1') trackEvent('application_started');
+      }
     }
 
     function applyTextUpdate() {
       var ta = document.getElementById('q5-text');
       var count = ta.value.length;
       document.getElementById('q5-count').textContent = count;
+      // Analytics: track Q5 once user writes enough
+      if (!window._tieQ5Tracked && count >= 30) {
+        window._tieQ5Tracked = true;
+        trackEvent('question_5_answered', {length: count});
+      }
       var nextBtn = document.getElementById('q5-next');
       if (nextBtn) nextBtn.disabled = count < 30;
       applyAnswers.q5 = count >= 80 ? 3 : count >= 30 ? 2 : 0;
@@ -3634,10 +3735,25 @@
         commitmentLevel: Q5_LABELS[applyAnswers.q5] || 'Not answered',
         coreProblem: deriveCoreProblem(applyAnswers, applyChoices),
         recommendedPath: deriveRecommendedPath(category),
-        status: deriveStatus(category)
+        status: deriveStatus(category),
+        landingPage: getSourceData().landingPage,
+        currentPage: getSourceData().currentPage,
+        referrer: getSourceData().referrer,
+        utmSource: getSourceData().utmSource,
+        utmMedium: getSourceData().utmMedium,
+        utmCampaign: getSourceData().utmCampaign,
+        utmContent: getSourceData().utmContent,
+        utmTerm: getSourceData().utmTerm,
+        deviceType: getSourceData().deviceType,
+        lastArticleViewed: (function(){ try { return sessionStorage.getItem('tie_last_article') || ''; } catch(e) { return ''; } })()
       };
 
-      console.log('Lead payload:', payload);
+      // Analytics: track application completion + fit category
+      trackEvent('application_completed', {score: applyScore, category: fitCategoryLabel});
+      if (category === 'strong') trackEvent('application_strong_fit');
+      else if (category === 'medium') trackEvent('application_medium_fit');
+      else trackEvent('application_weak_fit');
+
       fetch('https://script.google.com/macros/s/AKfycbwZ_uu-84n5H5PtJF2R0Rv8aJHb7eXQfh_3MJN6iL3Mj2AM3lstzWv91WBaU0spk8pu/exec', {
         method: 'POST',
         mode: 'no-cors',
@@ -3685,6 +3801,58 @@
       initFades();
     }, { passive: true });
   </script>
+
+  <!-- Global Link Tracking -->
+  <script>
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var page = window.location.pathname;
+      var isInsights = page.indexOf('/insights') === 0;
+
+      // Apply CTA (generic + page-specific origin)
+      if (href === '/apply') {
+        trackEvent('apply_click', {page: page});
+        if (page === '/') trackEvent('apply_homepage');
+        else if (isInsights) { trackEvent('apply_article', {page: page}); trackEvent('insight_to_apply_click', {page: page, target: 'apply'}); }
+        else if (page === '/work-with-me') trackEvent('apply_work_with_me');
+        else if (page === '/the-weekly-edge') trackEvent('apply_weekly_edge');
+        else if (page === '/about') trackEvent('apply_about');
+      }
+
+      // Work With Me
+      if (href === '/work-with-me') {
+        trackEvent('work_with_me_clicked', {page: page});
+        if (isInsights) trackEvent('insight_to_apply_click', {page: page, target: 'work_with_me'});
+      }
+
+      // Weekly Edge / Substack
+      if (href.indexOf('substack') > -1) {
+        trackEvent('substack_clicked', {page: page, url: href});
+        trackEvent('weekly_edge_clicked', {page: page});
+      }
+      if (href === '/the-weekly-edge') {
+        trackEvent('weekly_edge_clicked', {page: page});
+      }
+
+      // LinkedIn
+      if (href.indexOf('linkedin.com') > -1) {
+        trackEvent('linkedin_clicked', {page: page});
+      }
+
+      // X / Twitter
+      if (href.indexOf('x.com/') > -1 || href.indexOf('twitter.com') > -1) {
+        trackEvent('x_clicked', {page: page});
+      }
+
+      // Cal / Founder call
+      if (href.indexOf('cal.com') > -1 || href.indexOf('cal.id') > -1) {
+        trackEvent('founder_call_clicked', {page: page});
+      }
+    });
+  </script>
+
 </body>
 
 </html>

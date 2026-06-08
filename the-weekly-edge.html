@@ -2768,6 +2768,90 @@
       }
     }
   </style>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4JEYDJ451"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B4JEYDJ451');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x0uwt3ip1n");
+  </script>
+
+  <!-- Tracking Helper + Source Capture -->
+  <script>
+    // Safe event tracker - never blocks user actions
+    function trackEvent(eventName, params) {
+      params = params || {};
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params);
+        }
+      } catch (e) {
+        console.warn('GA tracking failed', e);
+      }
+    }
+
+    // Source data capture
+    (function() {
+      try {
+        // Landing page (first page in session)
+        if (!sessionStorage.getItem('tie_lp')) {
+          sessionStorage.setItem('tie_lp', window.location.pathname);
+        }
+        // Referrer (capture once per session)
+        if (!sessionStorage.getItem('tie_ref')) {
+          sessionStorage.setItem('tie_ref', document.referrer || '');
+        }
+        // UTM parameters (capture if present, persist for session)
+        var params = new URLSearchParams(window.location.search);
+        var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+        utmKeys.forEach(function(k) {
+          var v = params.get(k);
+          if (v) sessionStorage.setItem('tie_' + k, v);
+        });
+      } catch (e) {}
+    })();
+
+    function getDeviceType() {
+      var w = window.innerWidth;
+      if (w < 768) return 'mobile';
+      if (w < 1024) return 'tablet';
+      return 'desktop';
+    }
+
+    function getSourceData() {
+      try {
+        return {
+          landingPage: sessionStorage.getItem('tie_lp') || window.location.pathname,
+          currentPage: window.location.pathname,
+          referrer: sessionStorage.getItem('tie_ref') || document.referrer || '',
+          utmSource: sessionStorage.getItem('tie_utm_source') || '',
+          utmMedium: sessionStorage.getItem('tie_utm_medium') || '',
+          utmCampaign: sessionStorage.getItem('tie_utm_campaign') || '',
+          utmContent: sessionStorage.getItem('tie_utm_content') || '',
+          utmTerm: sessionStorage.getItem('tie_utm_term') || '',
+          deviceType: getDeviceType()
+        };
+      } catch (e) {
+        return {
+          landingPage: '', currentPage: window.location.pathname, referrer: '',
+          utmSource: '', utmMedium: '', utmCampaign: '', utmContent: '', utmTerm: '',
+          deviceType: getDeviceType()
+        };
+      }
+    }
+  </script>
+
 </head>
 
 <body>
@@ -2778,6 +2862,7 @@
         <a class="nav-link" id="nl-home" href="/">Home</a>
         <a class="nav-link" id="nl-wwm" href="/work-with-me">Work With Me</a>
         <a class="nav-link active" id="nl-edge" href="/the-weekly-edge">The Weekly Edge</a>
+        <a class="nav-link" id="nl-insights" href="/insights">Insights</a>
         <a class="nav-link" id="nl-about" href="/about">About</a>
         <a class="nav-cta" href="/apply">Apply</a>
       </div>
@@ -2797,11 +2882,13 @@
     <a class="mobile-nav-link" href="/">Home</a>
     <a class="mobile-nav-link" href="/work-with-me">Work With Me</a>
     <a class="mobile-nav-link" href="/the-weekly-edge">The Weekly Edge</a>
+    <a class="mobile-nav-link" href="/insights">Insights</a>
     <a class="mobile-nav-link" href="/about">About</a>
     <a class="mobile-nav-link"
       style="color:var(--lime);background:var(--navy);padding:16px;border-radius:8px;border:none;margin-top:12px;text-align:center;"
       href="/apply">Apply for Coaching</a>
   </div>
+
 
 
   <div class="page active" id="page-edge">
@@ -3050,6 +3137,7 @@
       if (!emailEl) return;
       var email = emailEl.value;
       if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+      trackEvent('newsletter_cta_clicked', {page: window.location.pathname, source: 'email_form'});
       window.open('https://theindependentedge.substack.com/', '_blank');
     }
     // EMAIL SIGNUP (edge)
@@ -3058,6 +3146,7 @@
       if (!emailEl) return;
       var email = emailEl.value;
       if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+      trackEvent('newsletter_cta_clicked', {page: window.location.pathname, source: 'email_form'});
       window.open('https://theindependentedge.substack.com/', '_blank');
     }
     function showThankYou(type) {
@@ -3153,7 +3242,6 @@
       var phone = (document.getElementById('capture-phone').value || '').trim();
       var category = applyScore >= 10 ? 'strong' : applyScore >= 7 ? 'medium' : 'weak';
       var leadData = { name: name, email: email, phone: phone, score: applyScore, category: category, answers: applyAnswers, timestamp: new Date().toISOString() };
-      console.log('Lead captured:', leadData);
       fetch('https://script.google.com/macros/s/AKfycbwZ_uu-84n5H5PtJF2R0Rv8aJHb7eXQfh_3MJN6iL3Mj2AM3lstzWv91WBaU0spk8pu/exec', {
         method: 'POST',
         mode: 'no-cors',
@@ -3206,6 +3294,58 @@
       initFades();
     }, { passive: true });
   </script>
+
+  <!-- Global Link Tracking -->
+  <script>
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var page = window.location.pathname;
+      var isInsights = page.indexOf('/insights') === 0;
+
+      // Apply CTA (generic + page-specific origin)
+      if (href === '/apply') {
+        trackEvent('apply_click', {page: page});
+        if (page === '/') trackEvent('apply_homepage');
+        else if (isInsights) { trackEvent('apply_article', {page: page}); trackEvent('insight_to_apply_click', {page: page, target: 'apply'}); }
+        else if (page === '/work-with-me') trackEvent('apply_work_with_me');
+        else if (page === '/the-weekly-edge') trackEvent('apply_weekly_edge');
+        else if (page === '/about') trackEvent('apply_about');
+      }
+
+      // Work With Me
+      if (href === '/work-with-me') {
+        trackEvent('work_with_me_clicked', {page: page});
+        if (isInsights) trackEvent('insight_to_apply_click', {page: page, target: 'work_with_me'});
+      }
+
+      // Weekly Edge / Substack
+      if (href.indexOf('substack') > -1) {
+        trackEvent('substack_clicked', {page: page, url: href});
+        trackEvent('weekly_edge_clicked', {page: page});
+      }
+      if (href === '/the-weekly-edge') {
+        trackEvent('weekly_edge_clicked', {page: page});
+      }
+
+      // LinkedIn
+      if (href.indexOf('linkedin.com') > -1) {
+        trackEvent('linkedin_clicked', {page: page});
+      }
+
+      // X / Twitter
+      if (href.indexOf('x.com/') > -1 || href.indexOf('twitter.com') > -1) {
+        trackEvent('x_clicked', {page: page});
+      }
+
+      // Cal / Founder call
+      if (href.indexOf('cal.com') > -1 || href.indexOf('cal.id') > -1) {
+        trackEvent('founder_call_clicked', {page: page});
+      }
+    });
+  </script>
+
 </body>
 
 </html>
