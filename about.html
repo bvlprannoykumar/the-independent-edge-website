@@ -8,7 +8,7 @@
   <!-- Primary Meta Tags -->
   <title>About | The Independent Edge</title>
   <meta name="title" content="About | The Independent Edge" />
-  <meta name="description" content="Learn why The Independent Edge was created, the experience behind it, and the philosophy that shapes how professionals build communication, sales ability, and commercial thinking." />
+  <meta name="description" content="Learn why The Independent Edge exists and how it helps Indian professionals make their value clearer when work, pressure, and decisions become real." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="The Independent Edge" />
 
@@ -19,7 +19,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://theindependentedge.in/about" />
   <meta property="og:title" content="About | The Independent Edge" />
-  <meta property="og:description" content="Learn why The Independent Edge was created, the experience behind it, and the philosophy that shapes how professionals build communication, sales ability, and commercial thinking." />
+  <meta property="og:description" content="Learn why The Independent Edge exists and how it helps Indian professionals make their value clearer when work, pressure, and decisions become real." />
   <meta property="og:image" content="https://theindependentedge.in/og-default.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://theindependentedge.in/about" />
   <meta name="twitter:title" content="About | The Independent Edge" />
-  <meta name="twitter:description" content="Learn why The Independent Edge was created, the experience behind it, and the philosophy that shapes how professionals build communication, sales ability, and commercial thinking." />
+  <meta name="twitter:description" content="Learn why The Independent Edge exists and how it helps Indian professionals make their value clearer when work, pressure, and decisions become real." />
   <meta name="twitter:image" content="https://theindependentedge.in/og-default.jpg" />
 
   <!-- Fonts -->
@@ -52,17 +52,19 @@
         "url": "https://theindependentedge.in/about",
         "image": "https://theindependentedge.in/prannoy-kumar-founder.jpg",
         "jobTitle": "Founder, The Independent Edge",
-        "description": "Sales and communication coach for Indian corporate professionals. Helps working professionals build clarity, conviction, and composure in high-stakes conversations.",
+        "description": "Founder of The Independent Edge. Helps Indian professionals turn experience into clearer value, stronger judgment, and better options in an AI-shaped market.",
         "sameAs": [
           "https://www.linkedin.com/in/prannoykumar/",
           "https://x.com/maverickprannoy"
         ],
         "knowsAbout": [
-          "Sales coaching",
-          "Communication skills",
+          "Professional development",
+          "Communication",
+          "Career optionality",
           "Commercial thinking",
-          "Sales psychology",
-          "Career development"
+          "AI-assisted work",
+          "Value clarity",
+          "Decision-making"
         ],
         "worksFor": {
           "@id": "https://theindependentedge.in/#organization"
@@ -74,7 +76,7 @@
         "name": "The Independent Edge",
         "url": "https://theindependentedge.in/",
         "logo": "https://theindependentedge.in/og-default.jpg",
-        "description": "Sales and communication coaching for Indian professionals who want stronger conversations and better career leverage.",
+        "description": "A professional development brand helping Indian professionals make their value clearer, build practical judgment, and become less dependent on one job.",
         "founder": {
           "@id": "https://theindependentedge.in/about#prannoy"
         },
@@ -1627,11 +1629,11 @@
     }
 
     .fnf-col.for .fnf-label {
-      color: var(--green, #16a34a);
+      color: var(--lime);
     }
 
     .fnf-col.notfor .fnf-label {
-      color: var(--red, #dc2626);
+      color: var(--ink3);
     }
 
     .fnf-list li {
@@ -1645,14 +1647,14 @@
     }
 
     .fnf-list .tick {
-      color: #16a34a;
+      color: var(--lime);
       font-size: 16px;
       flex-shrink: 0;
       margin-top: 1px;
     }
 
     .fnf-list .cross {
-      color: #dc2626;
+      color: var(--ink3);
       font-size: 16px;
       flex-shrink: 0;
       margin-top: 1px;
@@ -2831,11 +2833,12 @@
   </style>
 
   <style>
-  /* About page hero grid only - page-scoped */
+  /* About page - editorial layout */
+
+  /* HERO: 58/42 split */
   .about-hero {
     background: var(--bg);
-    padding-top: 140px;
-    padding-bottom: 80px;
+    padding: 140px 0 96px;
   }
   .about-hero-inner {
     max-width: var(--max);
@@ -2844,20 +2847,25 @@
   }
   .about-hero-grid {
     display: grid;
-    grid-template-columns: 1fr 320px;
-    grid-template-areas:
-      "heading image"
-      "copy    image";
-    gap: 56px;
+    grid-template-columns: 58% 1fr;
+    gap: 72px;
     align-items: start;
   }
-  .about-hero-heading { grid-area: heading; max-width: 680px; }
-  .about-hero-copy    { grid-area: copy;    max-width: 600px; }
-  .about-hero-image   { grid-area: image;   padding-top: 6px; }
+  .about-hero-text {
+    max-width: 580px;
+  }
+  .about-hero-text .eyebrow { margin-bottom: 24px; }
+  .about-hero-text .h-xl { margin-bottom: 28px; max-width: 560px; }
+  .about-hero-text .body-lg { line-height: 1.75; margin-bottom: 16px; }
+  .about-hero-text .body-lg:last-child { margin-bottom: 0; }
 
+  .about-hero-card {
+    max-width: 340px;
+    margin-left: auto;
+    padding-top: 8px;
+  }
   .about-portrait {
     width: 100%;
-    max-width: 320px;
     height: auto;
     border-radius: 16px;
     display: block;
@@ -2881,53 +2889,118 @@
   }
 
   @media (max-width: 900px) {
-    .about-hero {
-      padding-top: 112px;
-      padding-bottom: 56px;
-    }
-    .about-hero-inner {
-      padding: 0 24px;
-    }
+    .about-hero { padding: 112px 0 64px; }
+    .about-hero-inner { padding: 0 24px; }
     .about-hero-grid {
       grid-template-columns: 1fr;
-      grid-template-areas:
-        "heading"
-        "image"
-        "copy";
-      gap: 32px;
+      gap: 36px;
     }
-    .about-hero-heading,
-    .about-hero-copy {
-      max-width: 100%;
-    }
-    .about-portrait {
+    .about-hero-text { max-width: 100%; }
+    .about-hero-card {
       max-width: 280px;
       margin: 0 auto;
     }
-    .about-portrait-caption {
-      text-align: center;
-    }
+    .about-portrait-caption { text-align: center; }
   }
 
-  /* Section body wrapper - constrains line length for readability */
-  .about-prose {
-    max-width: 720px;
+  /* THE PATTERN: two-column editorial */
+  .about-pattern {
+    padding: 96px 0;
   }
-  .about-prose p {
-    margin-bottom: 18px;
+  .about-pattern-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
   }
-  .about-prose p:last-child {
+  .about-pattern-left { max-width: 420px; }
+  .about-pattern-left .eyebrow { margin-bottom: 20px; }
+  .about-pattern-right {
+    max-width: 560px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--ink2);
+  }
+  .about-pattern-right p { margin-bottom: 16px; }
+  .about-pattern-right p:last-child { margin-bottom: 0; }
+
+  @media (max-width: 900px) {
+    .about-pattern { padding: 72px 0; }
+    .about-pattern-inner {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding: 0 24px;
+    }
+    .about-pattern-left { max-width: 100%; }
+    .about-pattern-right { max-width: 100%; font-size: 17px; }
+  }
+
+  /* NORMAL PATH: capability grid */
+  .about-path {
+    background: var(--bg2);
+    padding: 96px 0;
+  }
+  .about-path-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .about-path-intro { max-width: 760px; margin-bottom: 36px; }
+  .about-path-intro .eyebrow { margin-bottom: 20px; }
+  .about-path-intro .body-lg { margin-top: 16px; line-height: 1.75; }
+
+  .about-cap-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 48px;
+    max-width: 780px;
     margin-bottom: 0;
   }
+  .about-cap-item {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--ink2);
+    padding: 8px 0;
+  }
+  .about-cap-item .cap-marker {
+    color: var(--lime);
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .about-cap-closing {
+    margin-top: 28px;
+    max-width: 560px;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.6;
+  }
 
-  /* Dark section transition styling */
+  @media (max-width: 768px) {
+    .about-path { padding: 72px 0; }
+    .about-path-inner { padding: 0 24px; }
+    .about-cap-grid { grid-template-columns: 1fr; gap: 6px; }
+  }
+
+  /* DARK SECTION: unchanged fundamentally, just tightened */
   .about-dark {
     background: var(--navy);
     color: #fff;
     padding: 110px 0;
   }
   .about-dark-inner {
-    max-width: var(--max-s);
+    max-width: 720px;
     margin: 0 auto;
     padding: 0 32px;
     text-align: center;
@@ -2947,8 +3020,10 @@
     font-size: 18px;
     line-height: 1.75;
   }
+  .about-dark-prose p { margin-bottom: 16px; }
+  .about-dark-prose p:last-child { margin-bottom: 0; }
   .about-dark-belief {
-    margin-top: 40px;
+    margin-top: 44px;
     padding-top: 32px;
     border-top: 1px solid rgba(204, 255, 0, .25);
   }
@@ -2970,12 +3045,91 @@
   }
 
   @media (max-width: 900px) {
-    .about-dark {
-      padding: 72px 0;
-    }
-    .about-dark-inner {
-      padding: 0 24px;
-    }
+    .about-dark { padding: 72px 0; }
+    .about-dark-inner { padding: 0 24px; }
+  }
+
+  /* FOUNDER NOTE: distinct card with lime accent */
+  .about-founder {
+    padding: 96px 0;
+  }
+  .about-founder-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .about-founder-card {
+    padding: 40px 44px 40px 40px;
+    background: var(--bg2);
+    border-left: 4px solid var(--lime);
+    border-radius: 0 14px 14px 0;
+  }
+  .about-founder-card .eyebrow { margin-bottom: 16px; }
+  .about-founder-card h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 20px;
+    letter-spacing: -.3px;
+  }
+  .about-founder-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink2);
+  }
+  .about-founder-body p { margin-bottom: 14px; }
+  .about-founder-body p:last-child { margin-bottom: 0; }
+  .about-founder-sig {
+    margin-top: 24px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  @media (max-width: 768px) {
+    .about-founder { padding: 72px 0; }
+    .about-founder-inner { padding: 0 24px; }
+    .about-founder-card { padding: 28px 24px 28px 22px; }
+  }
+
+  /* FINAL CTA: stronger presence */
+  .about-cta {
+    padding: 96px 32px;
+    text-align: center;
+  }
+  .about-cta-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .about-cta-heading {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -.4px;
+    margin-bottom: 14px;
+    line-height: 1.25;
+  }
+  .about-cta-copy {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink2);
+    max-width: 520px;
+    margin: 0 auto 28px;
+  }
+  .about-cta-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .about-cta { padding: 72px 24px; }
   }
 </style>
 
@@ -3100,97 +3254,110 @@
   </div>
 
 
-    <!-- HERO -->
+
+    <!-- HERO: 58/42 editorial split -->
     <section class="about-hero">
       <div class="about-hero-inner">
         <div class="about-hero-grid">
-
-          <!-- Heading (left, row 1 on desktop / 1st on mobile) -->
-          <div class="about-hero-heading fade">
+          <div class="about-hero-text fade">
             <span class="eyebrow">About</span>
-            <h1 class="h-xl" style="margin-bottom:0;">Why The Independent Edge Exists</h1>
+            <h1 class="h-xl">Why The Independent Edge Exists</h1>
+            <p class="body-lg">I spent nearly a decade inside growing technology companies. I worked around products, customers, internal teams, revenue pressure, and decisions that affected real people.</p>
+            <p class="body-lg">Over time, one pattern became hard to ignore. The people who moved forward were not always the people who knew the most. They were often the people who could connect their work to value, explain their thinking clearly, and stay steady when the stakes became real.</p>
+            <p class="body-lg">That is where many capable professionals struggle. Not because they lack intelligence. Because the normal professional path rarely trains them for those moments.</p>
           </div>
-
-          <!-- Image (right, spans both rows on desktop / 2nd on mobile) -->
-          <div class="about-hero-image fade fade-delay-2">
-            <img class="about-portrait"
-              src="/prannoy-kumar-founder.jpg"
-              alt="Prannoy Kumar, founder of The Independent Edge"
-              width="320" height="480"
-              loading="eager"
-              decoding="async" />
+          <div class="about-hero-card fade fade-delay-2">
+            <img class="about-portrait" src="/prannoy-kumar-founder.jpg" alt="Prannoy Kumar, founder of The Independent Edge" width="340" height="510" loading="eager" decoding="async" />
             <div class="about-portrait-caption">
               <div class="about-portrait-name">Prannoy Kumar</div>
               <div class="about-portrait-role">Founder, The Independent Edge</div>
             </div>
           </div>
-
-          <!-- Copy (left, row 2 on desktop / 3rd on mobile) -->
-          <div class="about-hero-copy fade fade-delay-1">
-            <p class="body-lg" style="margin-bottom:18px;">I spent nearly a decade building products inside growing technology companies. What I noticed had very little to do with technology.</p>
-            <p class="body-lg" style="margin-bottom:18px;">The professionals who moved fastest were rarely the smartest people in the room. They were the people who could think clearly when the stakes became real.</p>
-            <p class="body-lg" style="margin-bottom:18px;">When a client pushed back. When money entered the conversation. When a decision had to be made.</p>
-            <p class="body-lg" style="margin-bottom:0;">Most professionals never practise that skill deliberately. The Independent Edge was built to change that.</p>
-          </div>
-
         </div>
       </div>
     </section>
 
-    <!-- THE PATH HERE -->
-    <section class="section">
-      <div class="path-inner">
-        <div class="fade" style="margin-bottom:32px;">
-          <span class="eyebrow">The Path Here</span>
-          <h2 class="h-md" style="max-width:760px;">Knowledge was rarely the bottleneck. Communication under pressure was.</h2>
+    <!-- THE PATTERN: two-column editorial -->
+    <section class="about-pattern">
+      <div class="about-pattern-inner">
+        <div class="about-pattern-left fade">
+          <span class="eyebrow">The Pattern</span>
+          <h2 class="h-md">Knowledge was rarely the bottleneck. Clarity under pressure was.</h2>
         </div>
-        <div class="about-prose fade">
-          <p class="body-lg">My background spans product management, enterprise software, customer conversations, and high ticket sales. Across those experiences, one pattern appeared repeatedly.</p>
-          <p class="body-lg">Over the last several years, I have worked across product, technology, and revenue environments while influencing more than &#8377;3 Cr through sales conversations.</p>
-          <p class="body-lg">The same gap appeared everywhere. People knew more than they could communicate. They understood more than they could articulate. And when the stakes increased, their thinking became less clear.</p>
-          <p class="body-lg">That gap is what this work is built around.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY SALES (alternating bg2) -->
-    <section class="section" style="background:var(--bg2);">
-      <div class="path-inner">
-        <div class="fade" style="margin-bottom:32px;">
-          <span class="eyebrow">Why Sales</span>
-          <h2 class="h-md" style="max-width:760px;">Sales is where communication becomes measurable.</h2>
-        </div>
-        <div class="about-prose fade">
-          <p class="body-lg">Most people think sales is a profession. I think of it differently.</p>
-          <p class="body-lg">You either create movement or you do not. You either help someone make a decision or you do not. That makes it one of the fastest ways to expose weaknesses in thinking, confidence, and communication.</p>
-          <p class="body-lg">The lessons from sales extend far beyond selling. They influence leadership, negotiations, career growth, decision making, and the ability to create opportunities.</p>
+        <div class="about-pattern-right fade fade-delay-1">
+          <p>I saw smart people hesitate when they had to make their case. I saw experienced people struggle to explain the value of their work outside their own context.</p>
+          <p>I saw capable professionals do serious work, but still feel unsure when they had to ask, negotiate, present, influence, or defend a point of view.</p>
+          <p>I saw people prepare well and still lose control when pressure entered.</p>
+          <p>That gap is what this work is built around.</p>
         </div>
       </div>
     </section>
 
-    <!-- WHAT THE INDEPENDENT EDGE IS (dark section) -->
+    <!-- THE NORMAL PATH: capability grid -->
+    <section class="about-path">
+      <div class="about-path-inner">
+        <div class="about-path-intro fade">
+          <span class="eyebrow">The Problem With the Normal Path</span>
+          <h2 class="h-md">Most professionals are trained to do the work. Few are trained to carry the value of that work.</h2>
+          <p class="body-lg">The normal path teaches you to study, get hired, complete tasks, take responsibility, and become reliable. That matters.</p>
+          <p class="body-lg">But it does not automatically teach you how to:</p>
+        </div>
+        <div class="about-cap-grid fade">
+          <div class="about-cap-item"><span class="cap-marker">&#10003;</span>Explain your value clearly</div>
+          <div class="about-cap-item"><span class="cap-marker">&#10003;</span>Use your experience as proof</div>
+          <div class="about-cap-item"><span class="cap-marker">&#10003;</span>Think with the market in mind</div>
+          <div class="about-cap-item"><span class="cap-marker">&#10003;</span>Use AI without becoming generic</div>
+          <div class="about-cap-item"><span class="cap-marker">&#10003;</span>Ask better questions</div>
+          <div class="about-cap-item"><span class="cap-marker">&#10003;</span>Handle pushback</div>
+          <div class="about-cap-item"><span class="cap-marker">&#10003;</span>Talk about money</div>
+          <div class="about-cap-item"><span class="cap-marker">&#10003;</span>Guide a decision</div>
+          <div class="about-cap-item" style="grid-column:1/-1;"><span class="cap-marker">&#10003;</span>Stay calm when someone does not immediately agree</div>
+        </div>
+        <p class="about-cap-closing fade">These are the moments where opportunities, income, trust, and reputation often get decided.</p>
+      </div>
+    </section>
+
+    <!-- WHAT THIS IS: dark navy brand moment -->
     <section class="about-dark">
       <div class="about-dark-inner">
-        <span class="eyebrow fade">What The Independent Edge Is</span>
-        <h2 class="h-md fade">Not a motivation brand. Not a business opportunity. Not a promise of easy income.</h2>
+        <span class="eyebrow fade">What This Is</span>
+        <h2 class="h-md fade">The Independent Edge is built for that gap.</h2>
         <div class="about-dark-prose fade">
-          <p>It exists for professionals who want more control over income, decisions, opportunities, and important conversations.</p>
+          <p>It is for Indian professionals who are capable, but do not want to keep depending on being noticed quietly.</p>
+          <p>It is for people who want more control over the way their work, value, and judgment are understood.</p>
+          <p>It is not a motivation brand. Not a shortcut. Not a promise of easy income. Not a place for people who only want scripts or templates.</p>
         </div>
         <div class="about-dark-belief fade">
-          <div class="about-dark-belief-label">Everything here is built around one belief</div>
-          <div class="about-dark-belief-text">Knowledge is common. Composure is rare.</div>
+          <div class="about-dark-belief-label">It is built around one belief</div>
+          <div class="about-dark-belief-text">Your work may be good. But your value still has to be clear.</div>
         </div>
       </div>
     </section>
 
-    <!-- FINAL CTA (matches homepage final-cta) -->
-    <section class="final-cta">
-      <div class="final-cta-inner fade">
-        <h2 class="final-cta-title">If this resonates,<br /><em>start where it makes sense.</em></h2>
-        <p class="final-cta-sub">Two ways to begin. One direction.</p>
-        <div class="final-cta-btns">
+    <!-- FOUNDER NOTE: distinct card -->
+    <section class="about-founder">
+      <div class="about-founder-inner">
+        <div class="about-founder-card fade">
+          <span class="eyebrow">Founder Note</span>
+          <h2>What I kept seeing</h2>
+          <div class="about-founder-body">
+            <p>I have worked across product, customer conversations, technology, and revenue environments.</p>
+            <p>The same pattern kept appearing: people knew more than they could clearly use, explain, or turn into opportunity.</p>
+            <p>The Independent Edge is my attempt to help professionals build the kind of practical edge most careers expect, but rarely train.</p>
+          </div>
+          <div class="about-founder-sig">&mdash; Prannoy Kumar</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA: stronger presence -->
+    <section class="about-cta">
+      <div class="about-cta-inner fade">
+        <h2 class="about-cta-heading">If this feels familiar, start where it makes sense.</h2>
+        <p class="about-cta-copy">Read the essays, join the newsletter, or apply if you are ready to work on this directly.</p>
+        <div class="about-cta-buttons">
           <a class="btn btn-primary btn-lg" href="/apply">Apply for Coaching</a>
-          <a class="btn btn-outline-white btn-lg" href="/the-weekly-edge">Read The Weekly Edge</a>
+          <a class="btn btn-outline btn-lg" href="/the-weekly-edge">Read The Weekly Edge</a>
         </div>
       </div>
     </section>
@@ -3200,8 +3367,8 @@
       <div class="footer-top">
         <div>
           <div class="footer-brand">The Independent <span>Edge</span></div>
-          <div class="footer-tagline">Built for Indian corporate professionals who want more control over income and
-            more confidence in high stakes conversations.</div>
+          <div class="footer-tagline">Built for Indian professionals who want more control over the conversations that shape their career,
+            income, and opportunities.</div>
         </div>
         <div>
           <div class="footer-col-label">Content</div>

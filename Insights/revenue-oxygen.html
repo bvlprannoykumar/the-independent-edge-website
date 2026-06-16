@@ -1602,11 +1602,11 @@
     }
 
     .fnf-col.for .fnf-label {
-      color: var(--green, #16a34a);
+      color: var(--lime);
     }
 
     .fnf-col.notfor .fnf-label {
-      color: var(--red, #dc2626);
+      color: var(--ink3);
     }
 
     .fnf-list li {
@@ -1620,14 +1620,14 @@
     }
 
     .fnf-list .tick {
-      color: #16a34a;
+      color: var(--lime);
       font-size: 16px;
       flex-shrink: 0;
       margin-top: 1px;
     }
 
     .fnf-list .cross {
-      color: #dc2626;
+      color: var(--ink3);
       font-size: 16px;
       flex-shrink: 0;
       margin-top: 1px;
@@ -3162,6 +3162,90 @@
     .related-item-excerpt { padding-left: 22px; font-size: 14px; }
   }
 </style>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4JEYDJ451"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B4JEYDJ451');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x0uwt3ip1n");
+  </script>
+
+  <!-- Tracking Helper + Source Capture -->
+  <script>
+    // Safe event tracker - never blocks user actions
+    function trackEvent(eventName, params) {
+      params = params || {};
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params);
+        }
+      } catch (e) {
+        console.warn('GA tracking failed', e);
+      }
+    }
+
+    // Source data capture
+    (function() {
+      try {
+        // Landing page (first page in session)
+        if (!sessionStorage.getItem('tie_lp')) {
+          sessionStorage.setItem('tie_lp', window.location.pathname);
+        }
+        // Referrer (capture once per session)
+        if (!sessionStorage.getItem('tie_ref')) {
+          sessionStorage.setItem('tie_ref', document.referrer || '');
+        }
+        // UTM parameters (capture if present, persist for session)
+        var params = new URLSearchParams(window.location.search);
+        var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+        utmKeys.forEach(function(k) {
+          var v = params.get(k);
+          if (v) sessionStorage.setItem('tie_' + k, v);
+        });
+      } catch (e) {}
+    })();
+
+    function getDeviceType() {
+      var w = window.innerWidth;
+      if (w < 768) return 'mobile';
+      if (w < 1024) return 'tablet';
+      return 'desktop';
+    }
+
+    function getSourceData() {
+      try {
+        return {
+          landingPage: sessionStorage.getItem('tie_lp') || window.location.pathname,
+          currentPage: window.location.pathname,
+          referrer: sessionStorage.getItem('tie_ref') || document.referrer || '',
+          utmSource: sessionStorage.getItem('tie_utm_source') || '',
+          utmMedium: sessionStorage.getItem('tie_utm_medium') || '',
+          utmCampaign: sessionStorage.getItem('tie_utm_campaign') || '',
+          utmContent: sessionStorage.getItem('tie_utm_content') || '',
+          utmTerm: sessionStorage.getItem('tie_utm_term') || '',
+          deviceType: getDeviceType()
+        };
+      } catch (e) {
+        return {
+          landingPage: '', currentPage: window.location.pathname, referrer: '',
+          utmSource: '', utmMedium: '', utmCampaign: '', utmContent: '', utmTerm: '',
+          deviceType: getDeviceType()
+        };
+      }
+    }
+  </script>
+
 </head>
 
 <body>
@@ -3172,6 +3256,7 @@
         <a class="nav-link" id="nl-home" href="/">Home</a>
         <a class="nav-link" id="nl-wwm" href="/work-with-me">Work With Me</a>
         <a class="nav-link" id="nl-edge" href="/the-weekly-edge">The Weekly Edge</a>
+        <a class="nav-link active" id="nl-insights" href="/insights">Insights</a>
         <a class="nav-link" id="nl-about" href="/about">About</a>
         <a class="nav-cta" href="/apply">Apply</a>
       </div>
@@ -3191,11 +3276,13 @@
     <a class="mobile-nav-link" href="/">Home</a>
     <a class="mobile-nav-link" href="/work-with-me">Work With Me</a>
     <a class="mobile-nav-link" href="/the-weekly-edge">The Weekly Edge</a>
+    <a class="mobile-nav-link" href="/insights">Insights</a>
     <a class="mobile-nav-link" href="/about">About</a>
     <a class="mobile-nav-link"
       style="color:var(--lime);background:var(--navy);padding:16px;border-radius:8px;border:none;margin-top:12px;text-align:center;"
       href="/apply">Apply for Coaching</a>
   </div>
+
 
     <article class="article-page">
 
@@ -3367,8 +3454,8 @@ Do I understand how my company earns, keeps, and loses revenue?</p>
       <div class="footer-top">
         <div>
           <div class="footer-brand">The Independent <span>Edge</span></div>
-          <div class="footer-tagline">Built for Indian corporate professionals who want more control over income and
-            more confidence in high stakes conversations.</div>
+          <div class="footer-tagline">Built for Indian professionals who want more control over the conversations that shape their career,
+            income, and opportunities.</div>
         </div>
         <div>
           <div class="footer-col-label">Content</div>
@@ -3656,7 +3743,6 @@ Do I understand how my company earns, keeps, and loses revenue?</p>
         status: deriveStatus(category)
       };
 
-      console.log('Lead payload:', payload);
       fetch('https://script.google.com/macros/s/AKfycbwZ_uu-84n5H5PtJF2R0Rv8aJHb7eXQfh_3MJN6iL3Mj2AM3lstzWv91WBaU0spk8pu/exec', {
         method: 'POST',
         mode: 'no-cors',
@@ -3703,6 +3789,128 @@ Do I understand how my company earns, keeps, and loses revenue?</p>
     window.addEventListener('scroll', function () {
       initFades();
     }, { passive: true });
+  </script>
+
+  <!-- Global Link Tracking -->
+  <script>
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var page = window.location.pathname;
+      var isInsights = page.indexOf('/insights') === 0;
+
+      // Apply CTA (generic + page-specific origin)
+      if (href === '/apply') {
+        trackEvent('apply_click', {page: page});
+        if (page === '/') trackEvent('apply_homepage');
+        else if (isInsights) { trackEvent('apply_article', {page: page}); trackEvent('insight_to_apply_click', {page: page, target: 'apply'}); }
+        else if (page === '/work-with-me') trackEvent('apply_work_with_me');
+        else if (page === '/the-weekly-edge') trackEvent('apply_weekly_edge');
+        else if (page === '/about') trackEvent('apply_about');
+      }
+
+      // Work With Me
+      if (href === '/work-with-me') {
+        trackEvent('work_with_me_clicked', {page: page});
+        if (isInsights) trackEvent('insight_to_apply_click', {page: page, target: 'work_with_me'});
+      }
+
+      // Weekly Edge / Substack
+      if (href.indexOf('substack') > -1) {
+        trackEvent('substack_clicked', {page: page, url: href});
+        trackEvent('weekly_edge_clicked', {page: page});
+      }
+      if (href === '/the-weekly-edge') {
+        trackEvent('weekly_edge_clicked', {page: page});
+      }
+
+      // LinkedIn
+      if (href.indexOf('linkedin.com') > -1) {
+        trackEvent('linkedin_clicked', {page: page});
+      }
+
+      // X / Twitter
+      if (href.indexOf('x.com/') > -1 || href.indexOf('twitter.com') > -1) {
+        trackEvent('x_clicked', {page: page});
+      }
+
+      // Cal / Founder call
+      if (href.indexOf('cal.com') > -1 || href.indexOf('cal.id') > -1) {
+        trackEvent('founder_call_clicked', {page: page});
+      }
+    });
+  </script>
+
+
+  <!-- Article Scroll Depth + Engagement Time -->
+  <script>
+    (function() {
+      var meta = document.querySelector('.article-meta-top');
+      if (!meta) return;  // Not an article page
+
+      // Extract article metadata from DOM
+      var catEl = meta.querySelector('.meta-category');
+      var titleEl = document.querySelector('.article-title');
+      var slug = window.location.pathname.replace('/insights/', '');
+      var artTitle = titleEl ? titleEl.textContent.split(':')[0].split(' - ')[0].trim() : slug;
+      var category = catEl ? catEl.textContent.trim() : '';
+      var baseParams = {article_title: artTitle, article_slug: slug, category: category};
+
+      // Store last article viewed for attribution
+      try { sessionStorage.setItem('tie_last_article', artTitle); } catch(e) {}
+
+      // --- SCROLL DEPTH (fire once per threshold per session) ---
+      var sessionKey = 'tie_scroll_' + slug;
+      var firedDepths = {};
+      try {
+        var stored = sessionStorage.getItem(sessionKey);
+        if (stored) firedDepths = JSON.parse(stored);
+      } catch(e) {}
+
+      function checkScroll() {
+        var body = document.querySelector('.article-body');
+        if (!body) return;
+        var rect = body.getBoundingClientRect();
+        var bodyTop = rect.top + window.pageYOffset;
+        var bodyH = rect.height;
+        if (bodyH < 100) return;
+        var scrolled = (window.pageYOffset + window.innerHeight - bodyTop) / bodyH;
+        var pct = Math.min(Math.max(scrolled, 0), 1) * 100;
+        [25, 50, 75, 100].forEach(function(t) {
+          if (pct >= t && !firedDepths[t]) {
+            firedDepths[t] = true;
+            trackEvent('article_read_' + t, baseParams);
+            try { sessionStorage.setItem(sessionKey, JSON.stringify(firedDepths)); } catch(e) {}
+          }
+        });
+      }
+      window.addEventListener('scroll', checkScroll, {passive: true});
+      checkScroll();
+
+      // --- ENGAGEMENT TIME (visibility-aware, fire once) ---
+      var timeKey = 'tie_time_' + slug;
+      var firedTimes = {};
+      try {
+        var st = sessionStorage.getItem(timeKey);
+        if (st) firedTimes = JSON.parse(st);
+      } catch(e) {}
+
+      var elapsed = 0;
+      var interval = setInterval(function() {
+        if (document.visibilityState !== 'visible') return;
+        elapsed++;
+        [60, 180].forEach(function(t) {
+          if (elapsed >= t && !firedTimes[t]) {
+            firedTimes[t] = true;
+            var evName = t === 60 ? 'engaged_60_seconds' : 'engaged_180_seconds';
+            trackEvent(evName, {article_title: artTitle, article_slug: slug});
+            try { sessionStorage.setItem(timeKey, JSON.stringify(firedTimes)); } catch(e) {}
+          }
+        });
+        if (firedTimes[60] && firedTimes[180]) clearInterval(interval);
+      }, 1000);
+    })();
   </script>
 </body>
 
